@@ -30,11 +30,11 @@ public interface IUserManager {
 
         public static IUserManager newInstance() {
             /* Singleton */
-           // if (userManager == null) {
-           //     userManager = new UserManagerBasicImpl();
-            //}
-           // return userManager;
-            return null;
+            if (userManager == null) {
+                userManager = new UserManagerBasicImpl();
+            }
+            return userManager;
+            //return null;
 
         }
     }

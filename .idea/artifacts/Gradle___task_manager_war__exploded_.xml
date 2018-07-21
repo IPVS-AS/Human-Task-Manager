@@ -1,0 +1,75 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : task-manager.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/task-manager.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/task-manager.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="task-manager_main/web/Web Gradle : task-manager.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="task-manager_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-log4j12:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-jpa:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.6.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Gradle: org.jdom:jdom2:2.0.5" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.8" />
+          <element id="library" level="project" name="Gradle: commons-jxpath:commons-jxpath:1.3" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.jpa:2.5.1" />
+          <element id="library" level="project" name="Gradle: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Gradle: com.h2database:h2:1.3.173" />
+          <element id="library" level="project" name="Gradle: joda-time:joda-time:2.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-orm:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.aspectj:aspectjrt:1.7.2" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.core:2.5.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.asm:2.5.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.antlr:2.5.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:2.5.1" />
+          <element id="library" level="project" name="Gradle: commons-pool:commons-pool:1.5.4" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-asm:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.15/dfbc8244a01cd7afa3821f9f17f8c93ee4908e56/jersey-container-servlet-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.15/95acc5213b4df1a0f2bdbfa58fe8728b2762f90f/jersey-container-servlet-core-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.15/87c0bfe22ff9cf553a9a5a233aa54fd0db41c677/jersey-server-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.15/86934111571e6b736d7ad2b6f7647e5d874e42c0/jersey-client-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.15/eddbd0e4ca260bb4eca4f1f33071dcd75bbcd4ab/jersey-common-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0.1/104e9c2b5583cfcfeac0402316221648d6d8ea6b/javax.ws.rs-api-2.0.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.4.0-b06/7d7ac29839ae720cb32efb3c69636011323e1dc7/hk2-locator-2.4.0-b06.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/javax.inject/2.4.0-b06/bae639241d8afaf869cd60319021683b95819427/javax.inject-2.4.0-b06.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/479c1e06db31c432330183f5cae684163f186146/javax.annotation-api-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.15/15eb8e6214c413c567a4265bbc931f4e9099b99c/jersey-guava-2.15.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.4.0-b06/1ce898afcbd1cb37d94d30459f8b4d25c909c450/hk2-api-2.4.0-b06.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.1/4ed2b2d4738aed5786cfa64cba5a332779c4c708/osgi-resource-locator-1.0.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.4.0-b06/beeb25c0c92e8cfaa073733485a5927b60df7deb/hk2-utils-2.4.0-b06.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.4.0-b06/c202aed303326c185e27fb21d9aed29128087b7e/aopalliance-repackaged-2.4.0-b06.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.1-GA/d9a09f7732226af26bf99f19e2cffe0ae219db5b/javassist-3.18.1-GA.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

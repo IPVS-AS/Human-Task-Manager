@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shtm.test.StructureTestClass" tests="30" skipped="30" failures="0" errors="0" timestamp="2018-07-21T19:38:07" hostname="Sirius" time="0.001">
+  <properties/>
+  <testcase name="exitTest" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeKreisStruktur" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTwoSubStuctures" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T1T1" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T1T2" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T1T3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T1T4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T2T2" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T2T3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T2T4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T3T3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T3T4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksM1T4T4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="CheckMergeParents" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAndRemoveSubTasksOnType1" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAndRemoveSubTasksOnType2" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAndRemoveSubTasksOnType3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAndRemoveSubTasksOnType4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="removeSubTasksOfType1" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="removeSubTasksOfType2" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="removeSubTasksOfType3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="removeSubTasksOfType4" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="checkInformationOperations" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="checkCompletion" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="FailTest" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="checkInformationStructureOperations" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="mergeTasksAndAddSubTasks" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="FailTest2" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="FailTest3" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="checkPartialOrder" classname="com.shtm.test.StructureTestClass" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

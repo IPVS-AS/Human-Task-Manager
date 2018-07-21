@@ -61,6 +61,8 @@ public class UserManagerBasicImpl implements IUserManager {
                 userId, firstName, lastName, password);
         dataAccessProvider.persistUser(user);
 
+        System.out.println("altes add user: " + user.getUserId());
+
         return user;
     }
 

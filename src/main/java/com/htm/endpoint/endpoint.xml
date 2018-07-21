@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="usersService" class="com.htm.endpoint.impl.UsersServiceImpl" autowire="byName"/>
+    <bean class="com.htm.endpoint.api.UsersEndpoint" id="usersEndpoint">
+        <property name="usersService" ref="usersService"/>
+    </bean>
+
+
+</beans>
