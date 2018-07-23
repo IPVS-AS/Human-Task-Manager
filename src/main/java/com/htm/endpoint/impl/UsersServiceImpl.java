@@ -3,12 +3,15 @@ package com.htm.endpoint.impl;
 import com.htm.endpoint.UsersService;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.security.IUserManager;
+import com.htm.security.UserManagerBasicImpl;
 import com.htm.userdirectory.IUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
 
 @Service
+@Configurable
 public class UsersServiceImpl implements UsersService {
 
     @Autowired
@@ -16,8 +19,6 @@ public class UsersServiceImpl implements UsersService {
 
     private final String DUMMY_PASSWORD = "password";
 
-    public UsersServiceImpl() {
-    }
 
     @Override
     public String createUser(String json) {
@@ -60,9 +61,10 @@ public class UsersServiceImpl implements UsersService {
         return null;
     }
 
-    public void setiUserManager(IUserManager iUserManager) {
-        this.iUserManager = iUserManager;
-    }
 
-    public IUserManager getiUserManager() {return iUserManager;}
+//    public void setiUserManager(IUserManager iUserManager) {
+//        this.iUserManager = iUserManager;
+//    }
+//
+//    public IUserManager getiUserManager() {return iUserManager;}
 }

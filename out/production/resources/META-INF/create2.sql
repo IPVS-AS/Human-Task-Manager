@@ -336,3 +336,81 @@ CREATE TABLE STRUCTUREDATA (
   PRIMARY KEY (ID));
 ALTER TABLE STRUCTUREDATA ADD CONSTRAINT FK_STRUCTUREDATA_PARENTTASK_ID FOREIGN KEY (PARENTTASK_ID) REFERENCES STRUCTUREDATA (ID);
 ALTER TABLE STRUCTUREDATA ADD CONSTRAINT FK_STRUCTUREDATA_MERGETASK_ID FOREIGN KEY (MERGETASK_ID) REFERENCES STRUCTUREDATA (ID);
+
+-- -----------------------------------------------------
+-- TABLE Inputparameter
+-- -----------------------------------------------------
+
+CREATE TABLE INPUTPARAMETER (
+  ID INTEGER  NOT NULL,
+  TIID INTEGER,
+  KEY VARCHAR,
+  VALUE VARCHAR,
+  PRIMARY KEY (ID),
+  CONSTRAINT fk_inputparameter_tiid
+  FOREIGN KEY (tiid )
+  REFERENCES HumanTaskInstance(id )
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION );
+
+-- -----------------------------------------------------
+-- TABLE Outputparameter
+-- -----------------------------------------------------
+CREATE TABLE OUTPUTPARAMETER (
+  ID INTEGER  NOT NULL,
+  TIID INTEGER,
+  KEY VARCHAR,
+  VALUE VARCHAR,
+  PRIMARY KEY (ID),
+  CONSTRAINT fk_outputparameter_tiid
+  FOREIGN KEY (tiid )
+  REFERENCES HumanTaskInstance(id )
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION );
+
+-- -----------------------------------------------------
+-- TABLE TaskType
+-- -----------------------------------------------------
+CREATE TABLE TASKTYPE (
+  ID INTEGER NOT NULL,
+  TASKTYPENAME VARCHAR,
+  PRIMARY KEY (ID),
+  CONSTRAINT unique_TaskType_TaskTypename UNIQUE (TASKTYPENAME));
+
+-- -----------------------------------------------------
+-- TABLE TaskType_has_Groups
+-- -----------------------------------------------------
+
+CREATE TABLE TASKTYPEGROUPS (
+  GROUP_ID INTEGER NOT NULL,
+  TASKTYPE_ID INTEGER NOT NULL,
+  PRIMARY KEY (GROUP_ID, TASKTYPE_ID),
+  CONSTRAINT fk_TaskType_has_Group
+  FOREIGN KEY (TASKTYPE_ID)
+  REFERENCES TaskType(id)
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_Group_has_TaskType
+  FOREIGN KEY (Group_id)
+  REFERENCES Groups (id )
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION);
+
+-- -----------------------------------------------------
+-- TABLE TaskType_has_Groups
+-- -----------------------------------------------------
+
+CREATE TABLE TASKTYPETASKS (
+  TASK_ID INTEGER NOT NULL,
+  TASKTYPE_ID INTEGER NOT NULL,
+  PRIMARY KEY (TASK_ID, TASKTYPE_ID),
+  CONSTRAINT fk_TaskType_has_Task
+  FOREIGN KEY (TASKTYPE_ID)
+  REFERENCES TaskType(id)
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_Task_has_TaskType
+  FOREIGN KEY (TASK_ID)
+  REFERENCES HUMANTASKINSTANCE (id )
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION);

@@ -1,7 +1,10 @@
 package com.htm.endpoint;
 
-public interface UsersService {
+import org.springframework.stereotype.Repository;
 
+@Repository
+public interface UsersService {
+        String NAME = "usersService";
         //hier soll dann die neue ID zurück gegeben werden
         String createUser(String json);
 

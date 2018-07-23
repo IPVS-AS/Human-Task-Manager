@@ -3,17 +3,24 @@ package com.htm.endpoint.api;
 import com.htm.endpoint.UsersService;
 import com.htm.endpoint.impl.UsersServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("users")
+@Path("/users")
+@Controller
 public class UsersEndpoint {
 
-    @Autowired
-    private UsersService usersService;
+    private UsersServiceImpl usersService;
+//    @Qualifier("usersService")
+//    @Autowired
+//    private UsersServiceImpl usersService;
 
     @PUT
     @Path("/new")
@@ -51,11 +58,13 @@ public class UsersEndpoint {
         return Response.status(200).entity(result).build();
     }
 
-    public void setUsersService(UsersService usersService) {
-        this.usersService = usersService;
-    }
+    @Autowired
+   public void setUsersService(UsersServiceImpl usersService) {
+    this.usersService = usersService;
+  }
 
-    public UsersService getUsersService() {
+  public UsersService getUsersService() {
+
         return usersService;
     }
 }

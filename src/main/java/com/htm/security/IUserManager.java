@@ -21,6 +21,7 @@ package com.htm.security;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.userdirectory.IGroup;
 import com.htm.userdirectory.IUser;
+import org.springframework.stereotype.Repository;
 
 public interface IUserManager {
 
@@ -30,11 +31,11 @@ public interface IUserManager {
 
         public static IUserManager newInstance() {
             /* Singleton */
-            if (userManager == null) {
+          /*  if (userManager == null) {
                 userManager = new UserManagerBasicImpl();
             }
-            return userManager;
-            //return null;
+            return userManager; */
+           return null;
 
         }
     }
