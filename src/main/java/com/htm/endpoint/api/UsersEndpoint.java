@@ -16,10 +16,10 @@ import javax.ws.rs.core.Response;
 @Path("/users")
 public class UsersEndpoint {
 
-    private UsersService usersService = new UsersServiceImpl();
-//    @Qualifier("usersService")
-//    @Autowired
-//    private UsersServiceImpl usersService;
+//    private UsersService usersService = new UsersServiceImpl();
+    @Qualifier("usersService")
+    @Autowired
+    private UsersServiceImpl usersService;
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
@@ -56,10 +56,10 @@ public class UsersEndpoint {
         return Response.status(200).entity(result).build();
     }
 
-    /*@Autowired
+    @Autowired
    public void setUsersService(UsersServiceImpl usersService) {
     this.usersService = usersService;
-  }*/
+  }
 
   public UsersService getUsersService() {
 

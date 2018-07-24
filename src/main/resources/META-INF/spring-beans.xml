@@ -77,4 +77,7 @@
 
     <alias name="userByGroup" alias="DEFAULT" />
 
+    <bean id="usersService" class="com.htm.endpoint.impl.UsersServiceImpl" autowire="byName" />
+    <context:component-scan base-package="com.htm.endpoint.api"/>
+
 </beans>
