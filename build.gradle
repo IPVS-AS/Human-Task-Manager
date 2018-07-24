@@ -22,7 +22,7 @@ apply plugin: 'maven'
 apply plugin: 'war'
 
 
-
+project.webAppDirName = 'web'
 
 // In this section you declare where to find the dependencies of your project
 repositories {

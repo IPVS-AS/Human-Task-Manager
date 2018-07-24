@@ -14,23 +14,21 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/users")
-@Controller
 public class UsersEndpoint {
 
-    private UsersServiceImpl usersService;
+    private UsersService usersService = new UsersServiceImpl();
 //    @Qualifier("usersService")
 //    @Autowired
 //    private UsersServiceImpl usersService;
 
     @PUT
-    @Path("/new")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(String json) {
         String result = usersService.createUser("test");
         return Response.status(200).entity(result).build();
     }
 
     @GET
-    @Path("/allUsers")
     public Response getUsers() {
         String result = "allUsers";
         return Response.status(200).entity(result).build();
@@ -58,10 +56,10 @@ public class UsersEndpoint {
         return Response.status(200).entity(result).build();
     }
 
-    @Autowired
+    /*@Autowired
    public void setUsersService(UsersServiceImpl usersService) {
     this.usersService = usersService;
-  }
+  }*/
 
   public UsersService getUsersService() {
 
