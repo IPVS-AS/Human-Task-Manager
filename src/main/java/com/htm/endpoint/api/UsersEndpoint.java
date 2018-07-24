@@ -17,13 +17,14 @@ import javax.ws.rs.core.Response;
 @Controller
 public class UsersEndpoint {
 
+   // private UsersService usersService = new UsersServiceImpl();
+    //private UsersServiceImpl usersService;
+    @Qualifier("usersService")
+    @Autowired
     private UsersServiceImpl usersService;
-//    @Qualifier("usersService")
-//    @Autowired
-//    private UsersServiceImpl usersService;
 
     @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
+    //@Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(String json) {
         String result = usersService.createUser("test");
         return Response.status(200).entity(result).build();
@@ -57,10 +58,10 @@ public class UsersEndpoint {
         return Response.status(200).entity(result).build();
     }
 
-    @Autowired
-   public void setUsersService(UsersServiceImpl usersService) {
-    this.usersService = usersService;
-  }
+   // @Autowired
+//   public void setUsersService(UsersServiceImpl usersService) {
+//    this.usersService = usersService;
+//  }
 
   public UsersService getUsersService() {
 
