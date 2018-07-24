@@ -65,9 +65,11 @@ import com.htm.userdirectory.UserDirectoryFactory;
 //import com.htm.utils.JEEUtils;
 import com.htm.utils.Utilities;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
+@Component
 public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
 
     // public static final boolean CLOSE_ON_COMMIT = true;

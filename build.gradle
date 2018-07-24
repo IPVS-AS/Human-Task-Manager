@@ -23,7 +23,6 @@ apply plugin: 'war'
 
 
 
-
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'maven central' for resolving your dependencies.

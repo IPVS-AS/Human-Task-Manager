@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id = "WebApp_ID" version = "3.0">
-    <display-name>User Management</display-name>
+    <display-name>task-manager</display-name>
     <listener>
         <listener-class>
             org.springframework.web.context.ContextLoaderListener
@@ -25,10 +25,10 @@
     <!--</servlet-mapping>-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:META-INF/spring-beans.xml</param-value>
+        <param-value>classpath*:META-INF/spring-beans.xml</param-value>
     </context-param>
     <servlet>
-        <servlet-name>jersey-serlvet</servlet-name>
+        <servlet-name>Human-Tasks-Manger</servlet-name>
         <servlet-class>
             org.glassfish.jersey.servlet.ServletContainer
         </servlet-class>
@@ -36,14 +36,14 @@
             <param-name>
                 jersey.config.server.provider.packages
             </param-name>
-            <param-value>>com.htm</param-value>
+            <param-value>com.htm.endpoint.api</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>jersey-serlvet</servlet-name>
-        <url-pattern>/rest/*</url-pattern>
+        <servlet-name>Human-Tasks-Manger</servlet-name>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -23,14 +23,13 @@ public class UsersEndpoint {
 //    private UsersServiceImpl usersService;
 
     @PUT
-    @Path("/new")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(String json) {
         String result = usersService.createUser("test");
         return Response.status(200).entity(result).build();
     }
 
     @GET
-    @Path("/allUsers")
     public Response getUsers() {
         String result = "allUsers";
         return Response.status(200).entity(result).build();
