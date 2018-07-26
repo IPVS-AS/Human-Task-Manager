@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 public interface UsersService {
         String NAME = "usersService";
         //hier soll dann die neue ID zurück gegeben werden
-        String createUser(String json);
+        String createUser(String userId, String firstname, String lastname);
 
         String getUser(String id);
 

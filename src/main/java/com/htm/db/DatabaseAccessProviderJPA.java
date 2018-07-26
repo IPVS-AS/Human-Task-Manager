@@ -873,6 +873,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
         }
     }
 
+    @Override
+    public IUser createUser(String userId, String firstname, String lastname) {
+        return null;
+    }
+
     public boolean deleteUser(String userId) throws DatabaseException {
         log.debug("Trying to delete user with id: " + userId);
         Query query = em.createQuery("DELETE FROM User user WHERE user.userid = :userid");
@@ -880,6 +885,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
         boolean deleted = executeUpdate(query);
         log.debug("User deleted successfully: " + deleted);
         return deleted;
+    }
+
+    @Override
+    public Set<IUser> getAllUser() throws DatabaseException {
+        return null;
     }
 
     public void persistGroup(IGroup group) throws DatabaseException {
@@ -913,6 +923,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
         }
     }
 
+    @Override
+    public IGroup creatGroup(String groupName) throws DatabaseException {
+        return null;
+    }
+
 
     public boolean deleteGroup(String groupName) throws DatabaseException {
         log.debug("Trying to delete group: " + groupName);
@@ -921,6 +936,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
         boolean deleted = executeUpdate(query);
         log.debug("Group deleted successfully: " + deleted);
         return deleted;
+    }
+
+    @Override
+    public Set<IGroup> getAllGroups() throws DatabaseException {
+        return null;
     }
 
 

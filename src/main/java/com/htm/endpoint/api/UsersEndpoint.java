@@ -2,6 +2,10 @@ package com.htm.endpoint.api;
 
 import com.htm.endpoint.UsersService;
 import com.htm.endpoint.impl.UsersServiceImpl;
+import com.htm.userdirectory.IUser;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
@@ -25,9 +29,22 @@ public class UsersEndpoint {
 
     @PUT
     //@Consumes(MediaType.APPLICATION_JSON)
-    public Response createUser(String json) {
-        String result = usersService.createUser("test");
-        return Response.status(200).entity(result).build();
+    public Response createUser(String jsonString) {
+        JSONParser parser = new JSONParser();
+        JSONObject json = null;
+        try {
+            json = (JSONObject) parser.parse(jsonString);
+            String result = usersService.createUser((String) json.get("userId"), (String) json.get("firstname"), (String) json.get("lastname"));
+            if(result.equals("taken")){
+                return Response.status(409).entity("This UserId is taken").build();
+            }
+            return Response.status(200).entity(result).build();
+        } catch (ParseException e) {
+
+        }
+
+        return Response.status(500).build();
+
     }
 
     @GET
@@ -39,9 +56,15 @@ public class UsersEndpoint {
     @GET
     @Path("/{user}")
     public Response getUser(@PathParam("user") String user) {
+        try {
+            String result = usersService.getUser(user);
+            return Response.status(200).entity(result).build();
+        } catch (Exception e) {
 
-        String result = usersService.getUser("Dean79");
-        return Response.status(200).entity(result).build();
+        }
+        return Response.status(404).build();
+
+
     }
 
     @POST

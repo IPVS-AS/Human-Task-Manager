@@ -5,45 +5,63 @@ import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.security.IUserManager;
 import com.htm.security.UserManagerBasicImpl;
 import com.htm.userdirectory.IUser;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 
 @Service
 @Configurable
+
+//TODO: NOCH DIE ROLLEN DER USER HINZUFÜGEN!!!!!!!
 public class UsersServiceImpl implements UsersService {
 
-    @Autowired
-    protected IUserManager iUserManager;
+
+    protected IUserManager userManagerTosca;
 
     private final String DUMMY_PASSWORD = "password";
 
 
     @Override
-    public String createUser(String json) {
-        IUser user;
-        System.out.println("am anfang der neuen Create user methode");
+    public String createUser(String userId, String firstname, String lastname) {
+        IUser user = null;
+        JSONObject response = new JSONObject();
         try {
-            user = iUserManager.addUser("Dean79", "Dean", "Winchester", DUMMY_PASSWORD);
-            System.out.println(user.getFirstName());
-            return user.getId();
+             user = userManagerTosca.getUser(userId);
+            if (user == null) {
+                user = userManagerTosca.addUser(userId, firstname, lastname, DUMMY_PASSWORD);
+                System.out.println(user.getFirstName());
+                response.put("id", user.getId());
+                return response.toString();
+            }
+            return "taken";
         } catch (HumanTaskManagerException e) {
             e.printStackTrace();
-            return e.getMessage();
         }
-
+        return  null;
     }
 
     @Override
     public String getUser(String id) {
-
+        JSONObject response = new JSONObject();
         try {
-            return iUserManager.getUser(id).toString();
+            IUser user = userManagerTosca.getUser(id);
+            if (user != null) {
+                response.put("id", user.getId());
+                response.put("userId", user.getUserId());
+                response.put("firstname", user.getFirstName());
+                response.put("lastname", user.getLastName());
+                return response.toString();
+            }
         } catch (HumanTaskManagerException e) {
             e.printStackTrace();
-            return e.getMessage();
         }
+        return null;
     }
 
     @Override
@@ -62,9 +80,10 @@ public class UsersServiceImpl implements UsersService {
     }
 
 
-//    public void setiUserManager(IUserManager iUserManager) {
-//        this.iUserManager = iUserManager;
-//    }
-//
-//    public IUserManager getiUserManager() {return iUserManager;}
+    @Autowired
+    public void setiUserManager(IUserManager userManagerTosca) {
+        this.userManagerTosca = userManagerTosca;
+    }
+
+    public IUserManager getiUserManager() {return userManagerTosca;}
 }

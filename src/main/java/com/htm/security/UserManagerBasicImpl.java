@@ -19,6 +19,7 @@
 package com.htm.security;
 
 
+import com.htm.userdirectory.jpa.UserDirectoryFactoryJPA;
 import org.apache.log4j.Logger;
 
 import com.htm.db.IDataAccessProvider;
@@ -29,6 +30,8 @@ import com.htm.userdirectory.UserDirectoryFactory;
 import com.htm.utils.Utilities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
 
 @Transactional
 public class UserManagerBasicImpl implements IUserManager {
@@ -43,13 +46,13 @@ public class UserManagerBasicImpl implements IUserManager {
 
     protected final String ADMIN_CREDENTIAL = DUMMY_ADMIN_USERNAME.concat(CREDENTIAL_DELIMITER).concat(DUMMY_ADMIN_PASSWORD);
 
-    @Autowired
-    protected IDataAccessProvider dataAccessProvider;
+    //@Autowired
+    protected IDataAccessProvider dataAccessRepository;
 
     protected Logger log;
 
     public UserManagerBasicImpl() {
-        this.dataAccessProvider = this.dataAccessProvider;
+        //this.dataAccessRepository = dataAccessRepository;
         this.log = Utilities.getLogger(this.getClass());
     }
 
@@ -57,11 +60,11 @@ public class UserManagerBasicImpl implements IUserManager {
                          String firstName, String lastName, String password) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.ADD_USER);
 
-        IUser user = UserDirectoryFactory.newInstance().createNewUser(
+        UserDirectoryFactoryJPA userDirectory = new UserDirectoryFactoryJPA();
+        IUser user = userDirectory.createNewUser(
                 userId, firstName, lastName, password);
-        dataAccessProvider.persistUser(user);
+        dataAccessRepository.persistUser(user);
 
-        System.out.println("altes add user: " + user.getUserId());
 
         return user;
     }
@@ -70,7 +73,7 @@ public class UserManagerBasicImpl implements IUserManager {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.CHANGE_PASSWORD);
 
         /* Get the user model from the database and set the new pasword */
-        IUser user = dataAccessProvider.getUser(userId);
+        IUser user = dataAccessRepository.getUser(userId);
         if (user != null) {
             user.setPassword(newpassword);
             return true;
@@ -81,7 +84,7 @@ public class UserManagerBasicImpl implements IUserManager {
     public boolean deleteUser(String userId) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.DELETE_USER);
 
-        return dataAccessProvider.deleteUser(userId);
+        return dataAccessRepository.deleteUser(userId);
 
     }
 
@@ -89,7 +92,7 @@ public class UserManagerBasicImpl implements IUserManager {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.ADD_GROUP);
         /* Create group model and persist it */
         IGroup group = UserDirectoryFactory.newInstance().createNewGroup(groupName);
-        dataAccessProvider.persistGroup(group);
+        dataAccessRepository.persistGroup(group);
 
         return group;
     }
@@ -97,24 +100,29 @@ public class UserManagerBasicImpl implements IUserManager {
     public boolean deleteGroup(String groupName) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.DELETE_GROUP);
 
-        return dataAccessProvider.deleteGroup(groupName);
+        return dataAccessRepository.deleteGroup(groupName);
     }
 
     public IGroup getGroup(String groupName) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.GET_GROUP);
         /* Check if the passed credentials are correct */
-        return dataAccessProvider.getGroup(groupName);
+        return dataAccessRepository.getGroup(groupName);
 
     }
 
     public IUser getUser(String userId) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.GET_USER);
-        return dataAccessProvider.getUser(userId);
+        return dataAccessRepository.getUser(userId);
 
     }
 
     protected String createCredential(String userid, String password) {
         return userid.concat(CREDENTIAL_DELIMITER).concat(password);
+    }
+
+    @Resource(name="dataAccessRepository")
+    public void setDataAccessProvider(IDataAccessProvider dataAccessProvider) {
+        this.dataAccessRepository = dataAccessProvider;
     }
 
 

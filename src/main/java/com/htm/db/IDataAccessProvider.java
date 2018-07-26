@@ -145,15 +145,23 @@ public interface IDataAccessProvider {
 
     public IUser getUser(String userId) throws DatabaseException;
 
+    public IUser createUser(String userId, String firstname, String lastname) throws DatabaseException;
+
     public boolean deleteUser(String userId) throws DatabaseException;
+
+    public Set<IUser> getAllUser() throws DatabaseException;
 
     public void persistGroup(IGroup group) throws DatabaseException;
 
     public IGroup getGroup(String groupName) throws DatabaseException;
 
+    public IGroup creatGroup(String groupName) throws DatabaseException;
+
     public Set<String> getGroupNames() throws DatabaseException;
 
     public boolean deleteGroup(String groupName) throws DatabaseException;
+
+    public Set<IGroup> getAllGroups() throws DatabaseException;
 
     public List<ITaskInstance> getNonFinalizedTaskInstances() throws DatabaseException;
 }

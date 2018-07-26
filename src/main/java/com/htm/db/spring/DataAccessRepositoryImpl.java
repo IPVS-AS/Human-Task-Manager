@@ -957,6 +957,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         }
     }
 
+    @Override
+    public IUser createUser(String userId, String firstname, String lastname) {
+        return null;
+    }
+
     public boolean deleteUser(String userId) throws DatabaseException {
         log.debug("Trying to delete user with id: " + userId);
         Query query = em
@@ -965,6 +970,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         boolean deleted = executeUpdate(query);
         log.debug("User deleted successfully: " + deleted);
         return deleted;
+    }
+
+    @Override
+    public Set<IUser> getAllUser() throws DatabaseException {
+        return null;
     }
 
     public void persistGroup(IGroup group) throws DatabaseException {
@@ -999,6 +1009,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         }
     }
 
+    @Override
+    public IGroup creatGroup(String groupName) throws DatabaseException {
+        return null;
+    }
+
     public boolean deleteGroup(String groupName) throws DatabaseException {
         log.debug("Trying to delete group: " + groupName);
         Query query = em
@@ -1007,6 +1022,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         boolean deleted = executeUpdate(query);
         log.debug("Group deleted successfully: " + deleted);
         return deleted;
+    }
+
+    @Override
+    public Set<IGroup> getAllGroups() throws DatabaseException {
+        return null;
     }
 
     public List<ITaskInstance> getMyTasks(String genericHumanRole,
