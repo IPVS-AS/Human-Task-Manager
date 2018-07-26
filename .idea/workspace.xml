@@ -7,36 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d9e866-81ce-46de-8b85-bc401d76144c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_8_0_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___task_manager_war__exploded_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___task_manager_war__exploded_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_1_3_173.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/task-manager_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/task-manager_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/task-manager_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/task-manager_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/META-INF/spring-beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/META-INF/spring-beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/security/IUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/security/IUserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerBasicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerBasicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/create2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/create2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e3d9e866-81ce-46de-8b85-bc401d76144c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -140,8 +111,8 @@
       <file leaf-file-name="UsersServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="250">
+              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2165#2166#0" expanded="true" />
@@ -157,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersEndpoint.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsersEndpoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+            <state relative-caret-position="119">
+              <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,7 +150,7 @@
       <file leaf-file-name="DataAccessRepositoryToscaImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="403">
               <caret line="232" selection-start-line="232" selection-end-line="232" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -188,19 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/htm/test/DatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserManagerToscaImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
+            <state relative-caret-position="213">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -209,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-beans.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spring-beans.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-639">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="90">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -599,11 +561,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/drop.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/create2.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" />
       </list>
     </option>
@@ -1236,7 +1198,7 @@
       <workItem from="1532457081856" duration="1789000" />
       <workItem from="1532460468213" duration="2351000" />
       <workItem from="1532504238079" duration="18496000" />
-      <workItem from="1532592006354" duration="10575000" />
+      <workItem from="1532592006354" duration="13063000" />
     </task>
     <servers />
   </component>
@@ -1246,7 +1208,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85733000" />
+    <option name="totallyTimeSpent" value="88221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -1264,20 +1226,20 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.07560138" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.07560138" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.29896906" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45360824" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45360824" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Persistence" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.3298969" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17330211" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17330211" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32943013" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.17954724" />
@@ -1798,37 +1760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-639">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="250">
+          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2165#2166#0" expanded="true" />
@@ -1845,11 +1780,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        <state relative-caret-position="119">
+          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
         </state>
       </provider>
     </entry>
