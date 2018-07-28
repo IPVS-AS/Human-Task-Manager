@@ -1,8 +1,8 @@
 package com.htm.endpoint.impl;
 
-import com.htm.endpoint.TasksService;
+import com.htm.endpoint.ITasksService;
 
-public class TaskTypesServiceImpl implements TasksService {
+public class TaskTypesServiceImpl implements ITasksService {
     @Override
     public String createTask(String json) {
         return null;

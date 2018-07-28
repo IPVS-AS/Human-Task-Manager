@@ -272,7 +272,7 @@ CREATE TABLE USERS (
 -- Table Groups
 -- -----------------------------------------------------
 
-CREATE TABLE `GROUPS` (
+CREATE TABLE ROLES (
   ID        INTEGER NOT NULL,
   GROUPNAME VARCHAR(100),
   PRIMARY KEY (ID),
@@ -293,7 +293,7 @@ CREATE TABLE USERSGROUPS (
   ON UPDATE NO ACTION,
   CONSTRAINT fk_Group_has_User
   FOREIGN KEY (Group_id)
-  REFERENCES `Groups` (id )
+  REFERENCES Roles (id )
   ON DELETE CASCADE
   ON UPDATE NO ACTION);
 
@@ -392,7 +392,7 @@ CREATE TABLE TASKTYPEGROUPS (
   ON UPDATE NO ACTION,
   CONSTRAINT fk_Group_has_TaskType
   FOREIGN KEY (Group_id)
-  REFERENCES `Groups` (id )
+  REFERENCES Roles (id )
   ON DELETE CASCADE
   ON UPDATE NO ACTION);
 

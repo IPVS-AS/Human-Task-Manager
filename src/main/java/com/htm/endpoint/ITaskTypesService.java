@@ -1,6 +1,6 @@
 package com.htm.endpoint;
 
-public interface TaskTypesService {
+public interface ITaskTypesService {
     //hier soll dann die neue ID zurück gegeben werden
     String createTaskType(String json);
 

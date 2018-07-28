@@ -25,6 +25,7 @@ import org.springframework.stereotype.Repository;
 
 public interface IUserManager {
 
+
     public static class Factory {
 
         private static IUserManager userManager;
@@ -42,7 +43,7 @@ public interface IUserManager {
 
     public IUser addUser(String userId, String firstName, String lastName, String password) throws HumanTaskManagerException;
 
-    public IGroup addGroup(String groupName) throws HumanTaskManagerException;
+    public IGroup addGroup(String groupName, String[] genericHumanRoles) throws HumanTaskManagerException;
 
     public boolean deleteGroup(String groupName) throws HumanTaskManagerException;
 

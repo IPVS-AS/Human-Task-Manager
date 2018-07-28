@@ -12,14 +12,12 @@
 
     <!--import resource="classpath:META-INF/cxf/cxf.xml"/-->
 
-<!--
-    <jdbc:initialize-database data-source="dataSource">
-        &lt;!&ndash;<jdbc:script location="classpath:META-INF/drop.sql"/>&ndash;&gt;
-        <jdbc:script location="classpath:META-INF/create2.sql"/>
-        &lt;!&ndash;jdbc:script location="classpath:schema.sql"/>
-        <jdbc:script location="classpath:data.sql"/&ndash;&gt;
-    </jdbc:initialize-database>
--->
+
+    <!--<jdbc:initialize-database data-source="dataSource">-->
+        <!--&lt;!&ndash;<jdbc:script location="classpath:META-INF/drop.sql"/>&ndash;&gt;-->
+        <!--<jdbc:script location="classpath:META-INF/create2.sql"/>-->
+    <!--</jdbc:initialize-database>-->
+
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -82,10 +80,14 @@
     <alias name="userByGroup" alias="DEFAULT" />
     <bean id="usersService" class="com.htm.endpoint.impl.UsersServiceImpl" autowire="byName">
     </bean>
+    <bean id="rolesService" class="com.htm.endpoint.impl.RolesServiceImpl" autowire="byName" />
+    <bean id="taskTypesService" class="com.htm.endpoint.impl.TaskTypesServiceImpl" autowire="byName" />
+    <bean id="tasksService" class="com.htm.endpoint.impl.TaskTypesServiceImpl" autowire="byName" />
+
     <context:component-scan base-package="com.htm.endpoint.api"/>
     <bean id="usersEndpoint" class="com.htm.endpoint.api.UsersEndpoint" />
-
-
-    <!--<import resource="classpath:/com/htm/endpoint/endpoint.xml" />-->
+    <bean id="rolesEndpoint" class="com.htm.endpoint.api.RolesEndpoint" />
+    <bean id="taskTypesEndpoint" class="com.htm.endpoint.api.TaskTypesEndpoint" />
+    <bean id="tasksEndpoint" class="com.htm.endpoint.api.TasksEndpoint" />
 
 </beans>

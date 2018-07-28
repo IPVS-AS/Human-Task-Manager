@@ -892,6 +892,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
         return null;
     }
 
+    @Override
+    public boolean updateUser(String userId, String firstname, String lastname, String[] groups) throws DatabaseException {
+        return false;
+    }
+
     public void persistGroup(IGroup group) throws DatabaseException {
         persist(group.getAdaptee());
     }
@@ -924,9 +929,10 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
     }
 
     @Override
-    public IGroup creatGroup(String groupName) throws DatabaseException {
+    public IGroup createGroup(String groupName, String[] genericHumanRoles) throws DatabaseException {
         return null;
     }
+
 
 
     public boolean deleteGroup(String groupName) throws DatabaseException {
@@ -941,6 +947,11 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
     @Override
     public Set<IGroup> getAllGroups() throws DatabaseException {
         return null;
+    }
+
+    @Override
+    public boolean updateGroup(String groupname, String genericHumanRole) throws DatabaseException {
+        return false;
     }
 
 

@@ -7,14 +7,12 @@ import javax.ws.rs.core.Response;
 @Path("/taskTypes")
 public class TaskTypesEndpoint {
     @PUT
-    @Path("/new")
     public Response createTaskType(String json) {
         String result = "TaskType created";
         return Response.status(200).entity(result).build();
     }
 
     @GET
-    @Path("/allTaskTypes")
     public Response getTaskTypes() {
         String result = "allTaskTypes";
         return Response.status(200).entity(result).build();

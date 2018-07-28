@@ -1,18 +1,14 @@
 package com.htm.endpoint.api;
 
-import com.htm.endpoint.UsersService;
+import com.htm.endpoint.IUsersService;
 import com.htm.endpoint.impl.UsersServiceImpl;
-import com.htm.userdirectory.IUser;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
-import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -21,14 +17,12 @@ import javax.ws.rs.core.Response;
 @Controller
 public class UsersEndpoint {
 
-   // private UsersService usersService = new UsersServiceImpl();
-    //private UsersServiceImpl usersService;
     @Qualifier("usersService")
     @Autowired
     private UsersServiceImpl usersService;
 
     @PUT
-    //@Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;
@@ -49,8 +43,13 @@ public class UsersEndpoint {
 
     @GET
     public Response getUsers() {
-        String result = "allUsers";
-        return Response.status(200).entity(result).build();
+        try {
+            String result = usersService.getAllUsers();
+            return Response.status(200).entity(result).build();
+        } catch (Exception e) {
+            return Response.status(404).build();
+        }
+
     }
 
     @GET
@@ -69,24 +68,40 @@ public class UsersEndpoint {
 
     @POST
     @Path("/{user}")
-    public Response updateUser(@PathParam("user") String user) {
-        String result = "User updated";
-        return Response.status(200).entity(result).build();
+    public Response updateUser(@PathParam("user") String user, String jsonString) {
+        JSONParser parser = new JSONParser();
+        JSONObject json = null;
+        try {
+            json = (JSONObject) parser.parse(jsonString);
+            String [] groups = {"bli","bla"};
+            boolean result = usersService.updateUser((String) json.get("firstname"),
+                    (String) json.get("lastname"),groups,(String) json.get("userId"));
+            if (result) {
+                return Response.status(200).entity(result).build();
+            } else {
+                return Response.status(404).build();
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return Response.status(500).build();
     }
 
     @DELETE
     @Path("/{user}")
-    public Response deleteRole(@PathParam("user") String user) {
-        String result = "user deleted";
-        return Response.status(200).entity(result).build();
+    public Response deleteUser(@PathParam("user") String user) {
+
+        boolean result = usersService.deleteUser(user);
+        if (result) {
+            return Response.status(200).entity(result).build();
+        } else {
+            return Response.status(404).build();
+        }
     }
 
-   // @Autowired
-//   public void setUsersService(UsersServiceImpl usersService) {
-//    this.usersService = usersService;
-//  }
 
-  public UsersService getUsersService() {
+  public IUsersService getUsersService() {
 
         return usersService;
     }

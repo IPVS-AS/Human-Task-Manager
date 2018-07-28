@@ -3,7 +3,7 @@ package com.htm.endpoint;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsersService {
+public interface IUsersService {
         String NAME = "usersService";
         //hier soll dann die neue ID zurück gegeben werden
         String createUser(String userId, String firstname, String lastname);
@@ -12,7 +12,7 @@ public interface UsersService {
 
         String getAllUsers();
 
-        String updateUser(String json, String id);
+        boolean updateUser(String firstname, String lastname, String[] groups, String id);
 
-        String deleteUser(String id);
+        boolean deleteUser(String id);
 }

@@ -37,7 +37,7 @@ import com.htm.entities.WrappableEntity;
  * The persistent class for the GROUPS database table.
  */
 @Entity
-@Table(name = "GROUPS")
+@Table(name = "ROLES")
 public class Group implements Serializable, WrappableEntity {
     private static final long serialVersionUID = 1L;
 

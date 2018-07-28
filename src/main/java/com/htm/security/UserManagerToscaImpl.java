@@ -43,8 +43,8 @@ public class UserManagerToscaImpl implements IUserManager {
     }
 
     @Override
-    public IGroup addGroup(String groupName) throws HumanTaskManagerException {
-        return dataAccessTosca.creatGroup(groupName);
+    public IGroup addGroup(String groupName, String[] genericHumanRoles) throws HumanTaskManagerException {
+        return dataAccessTosca.createGroup(groupName, genericHumanRoles);
     }
 
     @Override

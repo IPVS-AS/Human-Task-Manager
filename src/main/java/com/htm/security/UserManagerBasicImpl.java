@@ -69,6 +69,11 @@ public class UserManagerBasicImpl implements IUserManager {
         return user;
     }
 
+    @Override
+    public IGroup addGroup(String groupName, String[] genericHumanRoles) throws HumanTaskManagerException {
+        return null;
+    }
+
     public boolean changePassword(String userId, String newpassword) throws HumanTaskManagerException {
         AuthorizationUtils.authorizeAdministrativeAction(EActions.CHANGE_PASSWORD);
 

@@ -1,6 +1,6 @@
 package com.htm.endpoint;
 
-public interface TasksService {
+public interface ITasksService {
     //hier soll dann die neue ID zurück gegeben werden
     String createTask(String json);
 

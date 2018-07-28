@@ -1,28 +1,30 @@
 package com.htm.endpoint.impl;
 
-import com.htm.endpoint.UsersService;
+import com.htm.db.IDataAccessProvider;
+import com.htm.endpoint.IUsersService;
+import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.security.IUserManager;
-import com.htm.security.UserManagerBasicImpl;
 import com.htm.userdirectory.IUser;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+import java.util.Set;
 
 
 @Service
 @Configurable
 
 //TODO: NOCH DIE ROLLEN DER USER HINZUFÜGEN!!!!!!!
-public class UsersServiceImpl implements UsersService {
+public class UsersServiceImpl implements IUsersService {
 
 
     protected IUserManager userManagerTosca;
+
+    protected IDataAccessProvider dataAccessTosca;
 
     private final String DUMMY_PASSWORD = "password";
 
@@ -35,7 +37,6 @@ public class UsersServiceImpl implements UsersService {
              user = userManagerTosca.getUser(userId);
             if (user == null) {
                 user = userManagerTosca.addUser(userId, firstname, lastname, DUMMY_PASSWORD);
-                System.out.println(user.getFirstName());
                 response.put("id", user.getId());
                 return response.toString();
             }
@@ -66,17 +67,48 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public String getAllUsers() {
+        try {
+            Set<IUser> allUsers = dataAccessTosca.getAllUser();
+            JSONArray response = new JSONArray();
+            if (allUsers != null) {
+                for (IUser user : allUsers) {
+                    JSONObject j = new JSONObject();
+                    j.put("id", user.getId());
+                    j.put("userId", user.getUserId());
+                    j.put("firstname", user.getFirstName());
+                    j.put("lastname", user.getLastName());
+                    response.add(j);
+                }
+                return response.toString();
+            }
+            return null;
+        } catch (DatabaseException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
-    public String updateUser(String json, String id) {
-        return null;
+    public boolean updateUser(String firstname, String lastname, String[] groups, String id) {
+        boolean response = false;
+        try {
+            response = dataAccessTosca.updateUser(id, firstname, lastname, groups);
+        } catch (DatabaseException e) {
+            e.printStackTrace();
+        }
+        return response;
     }
 
     @Override
-    public String deleteUser(String id) {
-        return null;
+    public boolean deleteUser(String id) {
+
+        boolean deleted = false;
+        try {
+            deleted = userManagerTosca.deleteUser(id);
+        } catch (HumanTaskManagerException e) {
+            e.printStackTrace();
+        }
+        return deleted;
     }
 
 
@@ -86,4 +118,11 @@ public class UsersServiceImpl implements UsersService {
     }
 
     public IUserManager getiUserManager() {return userManagerTosca;}
+
+    @Autowired
+    public void setIDataAccessProvider(IDataAccessProvider dataAccessTosca) {
+        this.dataAccessTosca = dataAccessTosca;
+    }
+
+    public IDataAccessProvider getIDataAccessProvider() {return dataAccessTosca;}
 }
