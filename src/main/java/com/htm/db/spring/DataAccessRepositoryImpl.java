@@ -68,6 +68,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Transactional
 @Component
 public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
@@ -982,6 +983,21 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         return false;
     }
 
+    @Override
+    public boolean addUserToGroup(String userId, String groupName) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public Set<IUser> getUserByGroup(String groupName) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public Set<String> getUserAllGroups(String userId) throws DatabaseException {
+        return null;
+    }
+
 
     public void persistGroup(IGroup group) throws DatabaseException {
         persist(group.getAdaptee());
@@ -1037,9 +1053,10 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
     }
 
     @Override
-    public boolean updateGroup(String groupname, String genericHumanRole) throws DatabaseException {
+    public boolean updateGroup(String groupname, String[] genericHumanRole) throws DatabaseException {
         return false;
     }
+
 
 
     public List<ITaskInstance> getMyTasks(String genericHumanRole,
@@ -1106,6 +1123,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         }
 
         return taskInstances;
+    }
+
+    @Override
+    public Set<String> getGenericHumanRolesByGroup(String groupname) throws DatabaseException {
+        return null;
     }
 
 }

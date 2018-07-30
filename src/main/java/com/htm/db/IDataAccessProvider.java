@@ -35,6 +35,8 @@ import com.htm.taskmodel.ITaskModel;
 import com.htm.userdirectory.IGroup;
 import com.htm.userdirectory.IUser;
 
+import javax.xml.crypto.Data;
+
 public interface IDataAccessProvider {
 
     public final static boolean JUNIT_TEST = true;
@@ -153,11 +155,17 @@ public interface IDataAccessProvider {
 
     public boolean updateUser(String userId, String firstname, String lastname, String[] groups) throws DatabaseException;
 
+    public boolean addUserToGroup(String userId, String groupName) throws DatabaseException;
+
+    public Set<IUser> getUserByGroup(String groupName) throws DatabaseException;
+
+    public Set<String> getUserAllGroups(String userId) throws DatabaseException;
+
     public void persistGroup(IGroup group) throws DatabaseException;
 
     public IGroup getGroup(String groupName) throws DatabaseException;
 
-    public IGroup createGroup(String groupName,String[] genericHumanRoles) throws DatabaseException;
+    public IGroup createGroup(String groupName, String[] genericHumanRoles) throws DatabaseException;
 
     public Set<String> getGroupNames() throws DatabaseException;
 
@@ -165,7 +173,9 @@ public interface IDataAccessProvider {
 
     public Set<IGroup> getAllGroups() throws DatabaseException;
 
-    public boolean updateGroup(String groupname, String genericHumanRole) throws DatabaseException;
+    public boolean updateGroup(String groupname, String[] genericHumanRole) throws DatabaseException;
 
     public List<ITaskInstance> getNonFinalizedTaskInstances() throws DatabaseException;
+
+    public Set<String> getGenericHumanRolesByGroup(String groupname) throws DatabaseException;
 }

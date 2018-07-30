@@ -2,8 +2,6 @@ package com.htm.endpoint;
 
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
-
 @Repository
 public interface IRolesService {
     String createRole(String roleName, String[] genericHumanRoles);
@@ -12,9 +10,9 @@ public interface IRolesService {
 
     String getAllRoles();
 
-    String getRoleUsers();
+    String getRoleUsers(String role);
 
-    String updateRole(String json, String id);
+    boolean updateRole(String id, String[] genericHumanRoles);
 
     boolean deleteRole(String id);
 }

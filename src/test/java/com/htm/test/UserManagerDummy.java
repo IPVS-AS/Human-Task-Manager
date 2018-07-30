@@ -69,13 +69,14 @@ public class UserManagerDummy extends SecurityContextInitializer {
         IUserManager um = this.iUserManager;
 
         /* Create Groups users.add(user); */
-        IGroup interns = um.addGroup(GROUP_DUMMY_INTERNS);
+        String[] stringarr = {"a", "b"};
+        IGroup interns = um.addGroup(GROUP_DUMMY_INTERNS, stringarr);
         dummyGroups.add(interns);
-        IGroup workOnDevs = um.addGroup(GROUP_DUMMY_WORKON_DEV);
+        IGroup workOnDevs = um.addGroup(GROUP_DUMMY_WORKON_DEV, stringarr);
         dummyGroups.add(workOnDevs);
-        IGroup employees = um.addGroup(GROUP_DUMMY_EMPLOYEES);
+        IGroup employees = um.addGroup(GROUP_DUMMY_EMPLOYEES, stringarr);
         dummyGroups.add(employees);
-        IGroup managers = um.addGroup(GROUP_DUMMY_MANAGERS);
+        IGroup managers = um.addGroup(GROUP_DUMMY_MANAGERS, stringarr);
         dummyGroups.add(managers);
 
         /* Create dummy users, associate them to one or more groups users.add(user);*/

@@ -5,6 +5,7 @@ import com.htm.endpoint.IUsersService;
 import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.security.IUserManager;
+import com.htm.userdirectory.IGroup;
 import com.htm.userdirectory.IUser;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 
@@ -30,7 +33,7 @@ public class UsersServiceImpl implements IUsersService {
 
 
     @Override
-    public String createUser(String userId, String firstname, String lastname) {
+    public String createUser(String userId, String firstname, String lastname, String[] groups) {
         IUser user = null;
         JSONObject response = new JSONObject();
         try {
@@ -38,6 +41,12 @@ public class UsersServiceImpl implements IUsersService {
             if (user == null) {
                 user = userManagerTosca.addUser(userId, firstname, lastname, DUMMY_PASSWORD);
                 response.put("id", user.getId());
+                if (groups != null) {
+                    for (int i = 0; i < groups.length; i++) {
+                        dataAccessTosca.addUserToGroup(user.getUserId(), groups[i]);
+                    }
+                }
+
                 return response.toString();
             }
             return "taken";
@@ -57,6 +66,7 @@ public class UsersServiceImpl implements IUsersService {
                 response.put("userId", user.getUserId());
                 response.put("firstname", user.getFirstName());
                 response.put("lastname", user.getLastName());
+                response.put("roles", dataAccessTosca.getUserAllGroups(id));
                 return response.toString();
             }
         } catch (HumanTaskManagerException e) {
@@ -77,6 +87,7 @@ public class UsersServiceImpl implements IUsersService {
                     j.put("userId", user.getUserId());
                     j.put("firstname", user.getFirstName());
                     j.put("lastname", user.getLastName());
+                    j.put("roles", dataAccessTosca.getUserAllGroups(user.getUserId()));
                     response.add(j);
                 }
                 return response.toString();

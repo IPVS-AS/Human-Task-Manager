@@ -2,6 +2,7 @@ package com.htm.endpoint.api;
 
 import com.htm.endpoint.IUsersService;
 import com.htm.endpoint.impl.UsersServiceImpl;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -19,7 +20,7 @@ public class UsersEndpoint {
 
     @Qualifier("usersService")
     @Autowired
-    private UsersServiceImpl usersService;
+    private IUsersService usersService;
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
@@ -28,7 +29,8 @@ public class UsersEndpoint {
         JSONObject json = null;
         try {
             json = (JSONObject) parser.parse(jsonString);
-            String result = usersService.createUser((String) json.get("userId"), (String) json.get("firstname"), (String) json.get("lastname"));
+            String[] groups = toStringArray((JSONArray) json.get("roles"));
+            String result = usersService.createUser((String) json.get("userId"), (String) json.get("firstname"), (String) json.get("lastname"), groups);
             if(result.equals("taken")){
                 return Response.status(409).entity("This UserId is taken").build();
             }
@@ -73,7 +75,7 @@ public class UsersEndpoint {
         JSONObject json = null;
         try {
             json = (JSONObject) parser.parse(jsonString);
-            String [] groups = {"bli","bla"};
+            String[] groups = toStringArray((JSONArray) json.get("roles"));
             boolean result = usersService.updateUser((String) json.get("firstname"),
                     (String) json.get("lastname"),groups,(String) json.get("userId"));
             if (result) {
@@ -104,5 +106,15 @@ public class UsersEndpoint {
   public IUsersService getUsersService() {
 
         return usersService;
+    }
+    public String[] toStringArray (JSONArray jsonArray) {
+        if (jsonArray != null) {
+            String [] array = new String[jsonArray.size()];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = jsonArray.get(i).toString();
+            }
+            return array;
+        }
+        return null;
     }
 }

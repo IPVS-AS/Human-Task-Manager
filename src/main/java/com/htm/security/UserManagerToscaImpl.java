@@ -26,7 +26,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * This class implements the IUserManager in the way that it can be used for the REST-API which is used by the app and OpenTOSCA
+ * This class implements the IUserManager in the way that it can be used for the REST-API.
+ *
  */
 
 @Transactional
