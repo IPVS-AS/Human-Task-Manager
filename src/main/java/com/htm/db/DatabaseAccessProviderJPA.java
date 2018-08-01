@@ -34,6 +34,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import com.htm.taskinstance.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -50,13 +51,6 @@ import com.htm.entities.jpa.Workitemtaskview;
 import com.htm.exceptions.AuthorizationException;
 import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
-import com.htm.taskinstance.ETaskInstanceState;
-import com.htm.taskinstance.IAssignedUser;
-import com.htm.taskinstance.IAttachment;
-import com.htm.taskinstance.ITaskInstance;
-import com.htm.taskinstance.IWorkItem;
-import com.htm.taskinstance.TaskInstanceFactory;
-import com.htm.taskinstance.WorkItemFactory;
 import com.htm.taskmodel.ILogicalPeopleGroupDef;
 import com.htm.taskmodel.ITaskModel;
 import com.htm.taskmodel.ModelElementFactory;
@@ -1033,6 +1027,41 @@ public class DatabaseAccessProviderJPA implements IDataAccessProvider {
 
     @Override
     public Set<String> getGenericHumanRolesByGroup(String groupname) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public ITaskType getTaskType(String taskTypeName) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public ITaskType createTaskType(String tasktypeName) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public boolean deleteTaskType(String tasktypeName) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public Set<ITaskType> getAllTaskTypes() throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public boolean updateTaskType(String tasktypename, String[] groups) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public boolean addGroupToTaskType(String taskTypeName, String groupName) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public Set<String> getTaskTypeAllGroups(String taskTypeName) throws DatabaseException {
         return null;
     }
 

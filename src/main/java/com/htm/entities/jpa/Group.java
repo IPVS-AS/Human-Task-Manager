@@ -60,6 +60,20 @@ public class Group implements Serializable, WrappableEntity {
     )
     private List<User> users;
 
+    //bi-directional many-to-many association to TaskType
+    @ManyToMany
+    @JoinTable(
+            name = "TaskTypeGroups"
+
+            , joinColumns = {
+            @JoinColumn(name = "GROUP_ID")
+    }
+            , inverseJoinColumns = {
+            @JoinColumn(name = "TASK_ID")
+    }
+    )
+    private List<TaskType> taskType;
+
     public Group() {
     }
 
@@ -85,6 +99,14 @@ public class Group implements Serializable, WrappableEntity {
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public List<TaskType> getTaskType() {
+        return taskType;
+    }
+
+    public void setTaskType(List<TaskType> taskType) {
+        this.taskType = taskType;
     }
 
 }

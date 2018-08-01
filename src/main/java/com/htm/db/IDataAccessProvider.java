@@ -26,10 +26,7 @@ import java.util.Set;
 import com.htm.dm.EHumanRoles;
 import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
-import com.htm.taskinstance.ETaskInstanceState;
-import com.htm.taskinstance.IAssignedUser;
-import com.htm.taskinstance.ITaskInstance;
-import com.htm.taskinstance.IWorkItem;
+import com.htm.taskinstance.*;
 import com.htm.taskmodel.ILogicalPeopleGroupDef;
 import com.htm.taskmodel.ITaskModel;
 import com.htm.userdirectory.IGroup;
@@ -178,4 +175,18 @@ public interface IDataAccessProvider {
     public List<ITaskInstance> getNonFinalizedTaskInstances() throws DatabaseException;
 
     public Set<String> getGenericHumanRolesByGroup(String groupname) throws DatabaseException;
+
+    public ITaskType getTaskType(String taskTypeName) throws DatabaseException;
+
+    public ITaskType createTaskType(String tasktypeName) throws DatabaseException;
+
+    public boolean deleteTaskType(String tasktypeName) throws DatabaseException;
+
+    public Set<ITaskType> getAllTaskTypes() throws DatabaseException;
+
+    public boolean updateTaskType(String tasktypename, String[] groups) throws DatabaseException;
+
+    public boolean addGroupToTaskType(String taskTypeName, String groupName) throws DatabaseException;
+
+    public Set<String> getTaskTypeAllGroups(String taskTypeName) throws DatabaseException;
 }

@@ -39,6 +39,9 @@
         <class>com.htm.entities.jpa.Callbackcorrelationproperty</class>
         <class>com.htm.entities.jpa.Attachment</class>
         <class>com.htm.entities.jpa.Assigneduser</class>
+        <class>com.htm.entities.jpa.TaskType</class>
+        <class>com.htm.entities.jpa.TaskTypeGroups</class>
+        <class>com.htm.entities.jpa.TaskTypeGroupsPK</class>
         <class>com.shtm.structureClasses.StructureData</class>
         <class>com.htm.audit.AuditEntry</class>
         <!--properties>

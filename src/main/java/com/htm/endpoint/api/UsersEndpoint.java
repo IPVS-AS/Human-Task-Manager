@@ -1,7 +1,6 @@
 package com.htm.endpoint.api;
 
 import com.htm.endpoint.IUsersService;
-import com.htm.endpoint.impl.UsersServiceImpl;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -14,6 +13,10 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Definition of the REST-API for managing users.
+ * This REST-API is used by the app and OpenTOSCA.
+ */
 @Path("/users")
 @Controller
 public class UsersEndpoint {
@@ -22,6 +25,14 @@ public class UsersEndpoint {
     @Autowired
     private IUsersService usersService;
 
+    /**
+     * Takes a JSON-String and creates a new user. the following keys are required to describe  the new user:
+     * userId, firstname, lastname, roles
+     * @param jsonString
+     *          describing the new user
+     * @return
+     *          Response with the ID of the newly created user
+     */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(String jsonString) {
@@ -43,7 +54,13 @@ public class UsersEndpoint {
 
     }
 
+    /**
+     * Returns all users
+     * @return
+     *         JASON-Array containing all users
+     */
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getUsers() {
         try {
             String result = usersService.getAllUsers();
@@ -54,6 +71,13 @@ public class UsersEndpoint {
 
     }
 
+    /**
+     * Gets an user with all corresponding attributes
+     * @param user
+     *         userId of user to be returned
+     * @return
+     *         JSON-Object containing attributes of user
+     */
     @GET
     @Path("/{user}")
     public Response getUser(@PathParam("user") String user) {
@@ -68,6 +92,15 @@ public class UsersEndpoint {
 
     }
 
+    /**
+     * Takes a JSON-String and updates an user. The following keys are required to update an user:
+     * @param user
+     *         userId of user to be updated
+     * @param jsonString
+     *         JSON-Object describing the new attributes of role
+     * @return
+     *          true if update was successful
+     */
     @POST
     @Path("/{user}")
     public Response updateUser(@PathParam("user") String user, String jsonString) {
@@ -90,6 +123,13 @@ public class UsersEndpoint {
         return Response.status(500).build();
     }
 
+    /**
+     * Deletes a specific user
+     * @param user
+     *          userId of user to be deleted
+     * @return
+     *         response containing true
+     */
     @DELETE
     @Path("/{user}")
     public Response deleteUser(@PathParam("user") String user) {
@@ -107,6 +147,14 @@ public class UsersEndpoint {
 
         return usersService;
     }
+
+    /**
+     * Takes a JSON-Array and converts it to a String-Array
+     * @param jsonArray
+     *         JSON-Array to be converted
+     * @return
+     *         String-Array containing values of jasonArray
+     */
     public String[] toStringArray (JSONArray jsonArray) {
         if (jsonArray != null) {
             String [] array = new String[jsonArray.size()];

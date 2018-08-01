@@ -3,10 +3,12 @@ package com.htm.db.spring;
 import com.htm.dm.EHumanRoles;
 import com.htm.entities.jpa.Group;
 import com.htm.entities.jpa.Literal;
+import com.htm.entities.jpa.TaskType;
 import com.htm.entities.jpa.User;
 import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.taskinstance.*;
+import com.htm.taskinstance.jpa.TaskTypeWrapper;
 import com.htm.taskmodel.ILiteral;
 import com.htm.taskmodel.ILogicalPeopleGroupDef;
 import com.htm.taskmodel.ITaskModel;
@@ -17,6 +19,7 @@ import com.htm.userdirectory.IUser;
 import com.htm.userdirectory.UserDirectoryFactory;
 import com.htm.userdirectory.jpa.GroupWrapper;
 import com.htm.userdirectory.jpa.UserWrapper;
+import com.htm.utils.Utilities;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -286,7 +289,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     }
 
     /**
-     * Delete the user with the given userId from the database
+     * Deletes the user with the given userId from the database
      * @param userId
      *          userId of the user to be deleted
      * @return
@@ -296,7 +299,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     @Override
     @Transactional
     public boolean deleteUser(String userId) throws DatabaseException {
-        IUser user = getUser(userId);
+
         Query query = em.createQuery("DELETE FROM User user WHERE user.userid = :userId");
         query.setParameter("userId", userId);
         int i = query.executeUpdate();
@@ -307,7 +310,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     }
 
     /**
-     * Get all users from the database
+     * Gets all users from the database
      * @return
      *         Set containing all users from the database
      * @throws DatabaseException
@@ -566,7 +569,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     }
 
     /**
-     * Delete the group with the given groupName from the database
+     * Deletes the group with the given groupName from the database
      * @param groupName
      *          name of group to be deleted
      * @return
@@ -599,7 +602,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     }
 
     /**
-     * Get all groups from the database
+     * Gets all groups from the database
      * @return
      *         Set containing all groups from the database
      * @throws DatabaseException
@@ -625,20 +628,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
             throw new DatabaseException(e);
         }
     }
-    /**
-     * updates the user belonging to userId with the given values
-     * @param userId
-     *          userId of user to be updated
-     * @param firstname
-     *          first name of user
-     * @param lastname
-     *          last name of user
-     * @param groups
-     *          groups which the user belongs to
-     * @return
-     *          true if the update was successful
-     * @throws DatabaseException
-     */
+
     /**
      * Updates the group belonging to groupname with the given values
      * The method overrides the old values with the new
@@ -718,6 +708,208 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
             throw new DatabaseException(e);
         }
 
+    }
+
+    /**
+     * Gets the task type wit the given name form the database
+      * @param taskTypeName
+     *          name of the task type
+     * @return
+     *          ITaskType-Instance corresponding to the new task type
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public ITaskType getTaskType(String taskTypeName) throws DatabaseException {
+
+        Query query = em.createQuery("SELECT t from TaskType t where t.taskTypeName = :taskTypeName");
+        query.setParameter("taskTypeName", taskTypeName);
+
+        //since task type names are supposed to be unique only one result is expected
+
+        TaskType taskTypeEntity = null;
+        try {
+            taskTypeEntity = (TaskType) query.getSingleResult();
+
+        } catch (Exception e) {
+            return null;
+        }
+        if (taskTypeEntity != null) {
+
+            Utilities.isValidClass(taskTypeEntity, TaskType.class);
+            return new TaskTypeWrapper((TaskType) taskTypeEntity);
+        }
+        return null;
+    }
+
+    /**
+     * Puts a new task type with the given values in the database
+     * @param tasktypeName
+     * @return
+     *          ITaskType-Instance corresponding to the new task type
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public ITaskType createTaskType(String tasktypeName) throws DatabaseException {
+        try {
+            if(getTaskType(tasktypeName) == null) {
+                ITaskType taskType = new TaskTypeWrapper(tasktypeName);
+                em.persist(taskType.getAdaptee());
+                return taskType;
+            }
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+        return null;
+    }
+
+    /**
+     * Deletes the task type with the given tasktypeName from the database
+     * @param tasktypeName
+     *          name of the task type to be deleted
+     * @return
+     *          true if task type was successfully deleted
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public boolean deleteTaskType(String tasktypeName) throws DatabaseException {
+        Query query = em.createQuery("DELETE FROM TaskType tt WHERE tt.taskTypeName = :taskTypeName");
+        query.setParameter("taskTypeName",tasktypeName);
+        int i = query.executeUpdate();
+        if (i >= 1) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Gets all task types form the database
+     * @return
+     *        Set containing all task types from the database
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public Set<ITaskType> getAllTaskTypes() throws DatabaseException {
+        try {
+            Query query = em.createQuery("SELECT tt FROM TaskType tt");
+            List<?> taskTypeEntities = query.getResultList();
+
+            //Get the task type entities and add them to the set of task types
+            Set<ITaskType> allTaskTypes = new HashSet<>();
+            if (taskTypeEntities != null) {
+                Iterator it = taskTypeEntities.iterator();
+                while (it.hasNext()) {
+                    TaskType taskType = (TaskType) it.next();
+                    Utilities.isValidClass(taskType, TaskType.class);
+                    allTaskTypes.add(new TaskTypeWrapper(taskType));
+                }
+            }
+            return allTaskTypes;
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    /**
+     * updates the task type belonging to tasktypename with the given values
+     * @param tasktypename
+     *          name of the task type to be updated
+     * @param groups
+     *          groups which are associated to task type
+     * @return
+     *          true if the update was successful
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public boolean updateTaskType(String tasktypename, String[] groups) throws DatabaseException {
+        boolean updated = false;
+        // add task types to all groups in parameter group
+        // task type type is still associated with groups which it was before
+        try {
+
+            for (int i = 0; i < groups.length; i++) {
+                addGroupToTaskType(tasktypename, groups[i]);
+            }
+            updated = true;
+            return updated;
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+
+    }
+
+    /**
+     * Adds a group to a task Type
+     * @param taskTypeName
+     *         task type name of the task type
+     * @param groupName
+     *         group name of the group to be added
+     * @return
+     *         true if group is added to task type or was already mapped to it
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public boolean addGroupToTaskType(String taskTypeName, String groupName) throws DatabaseException {
+        ITaskType taskType = getTaskType(taskTypeName);
+        IGroup group = getGroup(groupName);
+        // get all IDs of groups where the task type is already associated to
+        Query query = em.createQuery("SELECT tg.id.taskTypeId FROM TaskTypeGroups tg WHERE tg.id.groupId = :groupId");
+        query.setParameter("groupId", Integer.valueOf(group.getId()));
+        List<?> taskTypeIds = query.getResultList();
+        // if taskTypeIds is not null, then check for each ID if group is already associated with task type
+        if(taskTypeIds != null) {
+            Iterator it = taskTypeIds.iterator();
+            while (it.hasNext()) {
+                if (taskType.getId().equals(it.next().toString())) {
+                    return true;
+                }
+            }
+        }
+
+        if ((taskType != null) && (group != null)) {
+            // if task type is not already associated with the new group, add group as associated group and return true
+            taskType.addGroup(group);
+            em.persist(taskType.getAdaptee());
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Gets all group names of groups which are mapped to task type
+     * @param taskTypeName
+     *          name of the task type
+     * @return
+     *          Set of group names associated with task type
+     * @throws DatabaseException
+     */
+    @Override
+    @Transactional
+    public Set<String> getTaskTypeAllGroups(String taskTypeName) throws DatabaseException {
+        ITaskType taskType = getTaskType(taskTypeName);
+        // get all group_IDs from groups which the task type is associated to
+        Query query = em.createQuery("SELECT tg.id.groupId FROM TaskTypeGroups tg WHERE tg.id.taskTypeId = :taskTypeId");
+        query.setParameter("taskTypeId", Integer.valueOf(taskType.getId()));
+        List<?> groupId = query.getResultList();
+
+        //Get the group names belonging to the IDs and add them to the set of group names
+        Set<String> allGroupsTaskType = new HashSet<>();
+        if (groupId != null) {
+            Iterator it = groupId.iterator();
+            while (it.hasNext()) {
+                Query query1 = em.createQuery("SELECT gr.groupname FROM Group gr WHERE gr.id = :id");
+                query1.setParameter("id", (Integer) it.next());
+                String groupname = (String) query1.getSingleResult();
+                allGroupsTaskType.add(groupname);
+            }
+        }
+        return allGroupsTaskType;
     }
 
     /**

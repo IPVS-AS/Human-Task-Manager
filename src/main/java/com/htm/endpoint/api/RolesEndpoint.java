@@ -31,7 +31,8 @@ public class RolesEndpoint {
      *
      * @param jsonString
      *          describing the new role/group
-     * @return Response with the ID of the newly created role/group
+     * @return
+     *          Response with the ID of the newly created role/group
      */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
@@ -108,13 +109,14 @@ public class RolesEndpoint {
     }
 
     /**
-     * Takes a JSON-String and creates a new role/group. the following keys are required to describe  the new role/group:
+     * Takes a JSON-String and updates a role/group. the following keys are required to update a role/group:
      * rolename, genericHumanRoles
      * @param role
      *         name of role
      * @param jsonString
      *         JSON-Object describing the new attributes of role
      * @return
+     *         ture if update was successful
      */
     @POST
     @Path("/{role}")

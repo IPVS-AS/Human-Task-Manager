@@ -1,14 +1,17 @@
 package com.htm.endpoint;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface ITaskTypesService {
-    //hier soll dann die neue ID zurück gegeben werden
-    String createTaskType(String json);
+
+    String createTaskType(String taskTypeName, String[] roles);
 
     String getTaskType(String id);
 
     String getAllTaskTypes();
 
-    String updateTaskType(String json, String id);
+    boolean updateTaskType(String id, String[] roles);
 
-    String deleteTaskType(String id);
+    boolean deleteTaskType(String id);
 }

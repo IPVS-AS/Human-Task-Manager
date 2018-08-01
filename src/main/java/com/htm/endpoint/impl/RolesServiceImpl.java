@@ -156,7 +156,7 @@ public class RolesServiceImpl implements IRolesService {
     /**
      * Update role/group with given values
      * @param id
-     *          name of role/group that is updated
+     *          name of role/group to be updated
      * @param genericHumanRoles
      *          new geniric human roles mapped to id
      * @return
