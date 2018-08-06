@@ -3,6 +3,7 @@ package com.htm.taskinstance.jpa;
 import com.htm.dm.IPersistenceVisitor;
 import com.htm.entities.WrappableEntity;
 import com.htm.entities.jpa.Group;
+import com.htm.entities.jpa.Humantaskinstance;
 import com.htm.entities.jpa.TaskType;
 import com.htm.taskinstance.ITaskInstance;
 import com.htm.taskinstance.ITaskType;
@@ -68,6 +69,13 @@ public class TaskTypeWrapper implements ITaskType {
 
     @Override
     public void addTask(ITaskInstance task) {
+        List<Humantaskinstance> taskEntities = taskTypeEntity.getTasks();
+        // if the first task is added to the list of task is null
+        if (taskEntities == null) {
+            taskEntities = new ArrayList<Humantaskinstance>();
+            taskTypeEntity.setTasks(taskEntities);
+        }
+        taskEntities.add((Humantaskinstance) task.getAdaptee());
 
     }
 }

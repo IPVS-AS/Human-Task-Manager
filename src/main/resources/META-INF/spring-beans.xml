@@ -82,7 +82,7 @@
     </bean>
     <bean id="rolesService" class="com.htm.endpoint.impl.RolesServiceImpl" autowire="byName" />
     <bean id="taskTypesService" class="com.htm.endpoint.impl.TaskTypesServiceImpl" autowire="byName" />
-    <bean id="tasksService" class="com.htm.endpoint.impl.TaskTypesServiceImpl" autowire="byName" />
+    <bean id="tasksService" class="com.htm.endpoint.impl.TasksServiceImpl" autowire="byName" />
 
     <context:component-scan base-package="com.htm.endpoint.api"/>
     <bean id="usersEndpoint" class="com.htm.endpoint.api.UsersEndpoint" />

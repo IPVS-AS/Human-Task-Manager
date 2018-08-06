@@ -56,9 +56,12 @@ public class TaskTypesEndpoint {
     public Response getTaskTypes() {
         try {
             String result = taskTypesService.getAllTaskTypes();
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-            return Response.status(404).build();
+            return Response.status(500).build();
         }
     }
 
@@ -71,14 +74,17 @@ public class TaskTypesEndpoint {
      */
     @GET
     @Path("/{taskType}")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getTask(@PathParam("taskType") String taskType) {
         try {
             String result = taskTypesService.getTaskType(taskType);
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-
+            return Response.status(500).build();
         }
-        return Response.status(404).build();
     }
 
 
@@ -92,6 +98,7 @@ public class TaskTypesEndpoint {
      */
     @POST
     @Path("/{taskType}")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateTaskType(@PathParam("taskType") String taskType, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

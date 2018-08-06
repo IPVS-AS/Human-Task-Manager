@@ -64,9 +64,12 @@ public class RolesEndpoint {
     public Response getRoles() {
         try {
             String result = rolesService.getAllRoles();
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-            return Response.status(404).build();
+            return Response.status(500).build();
         }
 
     }
@@ -81,14 +84,17 @@ public class RolesEndpoint {
      */
     @GET
     @Path("/{role}")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getRole(@PathParam("role") String role) {
         try {
             String result = rolesService.getRole(role);
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-
+            return Response.status(500).build();
         }
-        return Response.status(404).build();
     }
 
     /**
@@ -100,6 +106,7 @@ public class RolesEndpoint {
      */
     @GET
     @Path("/{role}/user")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getRoleUsers(@PathParam("role") String role) {
         String result = rolesService.getRoleUsers(role);
         if (result == null) {
@@ -120,6 +127,7 @@ public class RolesEndpoint {
      */
     @POST
     @Path("/{role}")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateRole(@PathParam("role") String role, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

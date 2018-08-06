@@ -1,8 +1,15 @@
 package com.htm.endpoint;
 
+
+import org.springframework.stereotype.Repository;
+
+import java.util.HashMap;
+
+@Repository
 public interface ITasksService {
-    //hier soll dann die neue ID zurück gegeben werden
-    String createTask(String json);
+
+    String createTask(String name, String[] taskTypeNames, HashMap inputParameter,
+                      HashMap outputParameter, String title, String subject, String description, String priority);
 
     String getTask(String id);
 
@@ -12,13 +19,22 @@ public interface ITasksService {
 
     String getAllTaskTaskType(String typeId);
 
-    String updateTask(String json, String id);
+    String getInputParameter(String task);
 
-    String updateStatus(String id, String status);
+    String getOutputParameter(String task);
 
-    String claimTask(String id, String json);
+    String getPresentationDetails(String task);
 
-    String deleteTask(String id);
+    boolean updateOutputParameter(String task, HashMap outputParameters);
+
+    boolean updateTask(String id,String name, String[] taskTypeNames, String state, HashMap inputParameter,
+    HashMap outputParameter, String title, String subject, String description, String priority, String claimed);
+
+    boolean updateState(String id, String state);
+
+    boolean claimTask(String id, String userId);
+
+    boolean deleteTask(String id);
 
 
 }

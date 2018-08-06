@@ -69,7 +69,7 @@ public class Group implements Serializable, WrappableEntity {
             @JoinColumn(name = "GROUP_ID")
     }
             , inverseJoinColumns = {
-            @JoinColumn(name = "TASK_ID")
+            @JoinColumn(name = "TASKTYPE_ID")
     }
     )
     private List<TaskType> taskType;

@@ -22,15 +22,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import com.htm.entities.WrappableEntity;
 
@@ -130,6 +122,19 @@ public class Humantaskinstance implements Serializable, WrappableEntity {
     @ManyToOne
     @JoinColumn(name = "MODELID")
     private Humantaskmodel humantaskmodel;
+
+    //bi-directional many-to-many association to Task
+    @ManyToMany
+    @JoinTable(
+            name = "TaskTypeTasks",
+            joinColumns = {
+                    @JoinColumn(name = "TASK_ID")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "TASKTYPE_ID")
+            }
+    )
+    private List<TaskType> taskTypes;
 
     public Humantaskinstance() {
     }
@@ -430,6 +435,14 @@ public class Humantaskinstance implements Serializable, WrappableEntity {
 
     public void setContextId(String contextId) {
         this.contextId = contextId;
+    }
+
+    public List<TaskType> getTaskTypes() {
+        return taskTypes;
+    }
+
+    public void setTaskTypes(List<TaskType> taskTypes) {
+        this.taskTypes = taskTypes;
     }
 
 

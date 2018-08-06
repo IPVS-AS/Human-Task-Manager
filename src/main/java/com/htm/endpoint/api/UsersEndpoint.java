@@ -64,9 +64,12 @@ public class UsersEndpoint {
     public Response getUsers() {
         try {
             String result = usersService.getAllUsers();
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-            return Response.status(404).build();
+            return Response.status(500).build();
         }
 
     }
@@ -80,14 +83,17 @@ public class UsersEndpoint {
      */
     @GET
     @Path("/{user}")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getUser(@PathParam("user") String user) {
         try {
             String result = usersService.getUser(user);
+            if (result == null) {
+                return Response.status(404).build();
+            }
             return Response.status(200).entity(result).build();
         } catch (Exception e) {
-
+            return Response.status(500).build();
         }
-        return Response.status(404).build();
 
 
     }
@@ -103,6 +109,7 @@ public class UsersEndpoint {
      */
     @POST
     @Path("/{user}")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateUser(@PathParam("user") String user, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

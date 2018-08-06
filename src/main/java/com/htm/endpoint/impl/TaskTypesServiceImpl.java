@@ -5,7 +5,6 @@ import com.htm.endpoint.ITaskTypesService;
 import com.htm.exceptions.DatabaseException;
 import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.taskinstance.ITaskType;
-import com.htm.userdirectory.IGroup;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;

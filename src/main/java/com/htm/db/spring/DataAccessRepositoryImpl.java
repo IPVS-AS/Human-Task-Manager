@@ -1159,4 +1159,77 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
         return null;
     }
 
+    @Override
+    public ITaskInstance createTask(String name, String title, String subject, String description, String priority, String[] taskTypeNames) throws DatabaseException {
+        return null;
+    }
+
+
+
+    @Override
+    public boolean createInputParameter(String key, String value, String tiid) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public boolean createOutputParameter(String key, String value, String tiid) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public boolean addTaskToTaskType(String tiid, String taskTypeName) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public Set<IInputParameter> getInputParametersByTask(String tiid) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public Set<IOutputParameter> getOutputParametersByTask(String tiid) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public Set<ITaskInstance> getAllTasks() throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public Set<ITaskInstance> getTasksByUser(String userId) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public Set<ITaskInstance> getTasksByTaskType(String taskTypeName) throws DatabaseException {
+        return null;
+    }
+
+    @Override
+    public boolean updateOutputParameter(String task, HashMap outputparameters) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public boolean updateTask(String id, String name, String[] taskTypeNames, String status, HashMap inputParameter, HashMap outputParameter, String title, String subject, String description, String priority, String claimed) throws DatabaseException {
+        return false;
+    }
+
+
+    @Override
+    public boolean updateState(String tiid, String state) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public boolean claimTask(String tiid, String userId) throws DatabaseException {
+        return false;
+    }
+
+    @Override
+    public Set<String> getTaskTypeByTask(String tiid) throws DatabaseException {
+        return null;
+    }
+
 }

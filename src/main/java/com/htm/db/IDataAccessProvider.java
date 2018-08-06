@@ -19,6 +19,7 @@
 package com.htm.db;
 
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -189,4 +190,34 @@ public interface IDataAccessProvider {
     public boolean addGroupToTaskType(String taskTypeName, String groupName) throws DatabaseException;
 
     public Set<String> getTaskTypeAllGroups(String taskTypeName) throws DatabaseException;
+
+    public ITaskInstance createTask(String name, String title, String subject, String description,
+                                    String priority, String[] taskTypeNames) throws DatabaseException;
+
+    public boolean createInputParameter(String key, String value, String tiid) throws DatabaseException;
+
+    public boolean createOutputParameter(String key, String value, String tiid) throws DatabaseException;
+
+    public boolean addTaskToTaskType(String tiid, String taskTypeName) throws DatabaseException;
+
+    public Set<IInputParameter> getInputParametersByTask(String tiid) throws DatabaseException;
+
+    public Set<IOutputParameter> getOutputParametersByTask(String tiid) throws DatabaseException;
+
+    public Set<ITaskInstance> getAllTasks() throws DatabaseException;
+
+    public Set<ITaskInstance> getTasksByUser(String userId) throws DatabaseException;
+
+    public Set<ITaskInstance> getTasksByTaskType(String taskTypeName) throws DatabaseException;
+
+    public boolean updateOutputParameter(String task, HashMap outputparameters) throws DatabaseException;
+
+    public boolean updateTask(String id,String name, String[] taskTypeNames, String status, HashMap inputParameter,
+                              HashMap outputParameter, String title, String subject, String description, String priority, String claimed) throws DatabaseException;
+
+    public boolean updateState(String tiid, String state) throws DatabaseException;
+
+    public boolean claimTask(String tiid, String userId) throws DatabaseException;
+
+    public Set<String> getTaskTypeByTask (String tiid) throws DatabaseException;
 }

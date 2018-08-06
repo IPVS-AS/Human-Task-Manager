@@ -2,7 +2,10 @@ package com.htm.entities.jpa;
 
 import com.htm.entities.WrappableEntity;
 
-import javax.persistence.*;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**

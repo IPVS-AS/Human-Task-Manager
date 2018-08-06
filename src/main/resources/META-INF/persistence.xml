@@ -42,6 +42,10 @@
         <class>com.htm.entities.jpa.TaskType</class>
         <class>com.htm.entities.jpa.TaskTypeGroups</class>
         <class>com.htm.entities.jpa.TaskTypeGroupsPK</class>
+        <class>com.htm.entities.jpa.TaskTypeTasks</class>
+        <class>com.htm.entities.jpa.TaskTypeTasksPK</class>
+        <class>com.htm.entities.jpa.InputParameter</class>
+        <class>com.htm.entities.jpa.OutputParameter</class>
         <class>com.shtm.structureClasses.StructureData</class>
         <class>com.htm.audit.AuditEntry</class>
         <!--properties>
