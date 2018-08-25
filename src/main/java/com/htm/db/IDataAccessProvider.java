@@ -191,6 +191,8 @@ public interface IDataAccessProvider {
 
     public Set<String> getTaskTypeAllGroups(String taskTypeName) throws DatabaseException;
 
+    public Set<String> getTaskTypeByGroup(String roleName) throws DatabaseException;
+
     public ITaskInstance createTask(String name, String title, String subject, String description,
                                     String priority, String[] taskTypeNames) throws DatabaseException;
 

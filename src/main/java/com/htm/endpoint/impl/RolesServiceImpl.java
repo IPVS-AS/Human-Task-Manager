@@ -153,6 +153,31 @@ public class RolesServiceImpl implements IRolesService {
     }
 
     /**
+     * Get all Task Types belonging to a specific role/group
+     * @param role
+     *         name of role/group
+     * @return
+     *         JSON-Array as String with all Task Types belonging to role
+     */
+    @Override
+    public String getRoleTaskTypes(String role) {
+        try {
+            Set<String> allTaskTypesByRole = dataAccessTosca.getTaskTypeByGroup(role);
+            JSONArray response = new JSONArray();
+            if (allTaskTypesByRole != null) {
+                for (String taskTypeName: allTaskTypesByRole) {
+                    response.add(taskTypeName);
+                }
+                //response.addAll(allTaskTypesByRole);
+            }
+            return response.toString();
+        } catch (DatabaseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
      * Update role/group with given values
      * @param id
      *          name of role/group to be updated

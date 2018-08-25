@@ -1160,6 +1160,11 @@ public class DataAccessRepositoryImpl implements DataAccessRepositoryCustom {
     }
 
     @Override
+    public Set<String> getTaskTypeByGroup(String roleName) throws DatabaseException {
+        return null;
+    }
+
+    @Override
     public ITaskInstance createTask(String name, String title, String subject, String description, String priority, String[] taskTypeNames) throws DatabaseException {
         return null;
     }

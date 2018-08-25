@@ -1018,6 +1018,36 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
     }
 
     /**
+     * Gets all task type names of task type which are mapped to group
+     * @param roleName
+     *          name of the group
+     * @return
+     *          Set of task type names associated with group
+     * @throws DatabaseException
+     */
+    @Override
+    public Set<String> getTaskTypeByGroup(String roleName) throws DatabaseException {
+        IGroup group = getGroup(roleName);
+        //  get all taskType_IDs from groups which the group is associated to
+        Query query = em.createQuery("SELECT tg.id.taskTypeId FROM TaskTypeGroups tg WHERE tg.id.groupId = :groupId");
+        query.setParameter("groupId", Integer.valueOf(group.getId()));
+        List<?> taskTypeIds = query.getResultList();
+
+        //Get the task type names belonging to the IDs and add them to the set of task type names
+        Set<String> allTaskTypeGroups = new HashSet<>();
+        if (!taskTypeIds.isEmpty()) {
+            Iterator it = taskTypeIds.iterator();
+            while (it.hasNext()) {
+                Query query1 = em.createQuery("SELECT tt.taskTypeName FROM TaskType tt WHERE tt.id = :id");
+                query1.setParameter("id", (Integer) it.next());
+                String taskTypeName = (String) query1.getSingleResult();
+                allTaskTypeGroups.add(taskTypeName);
+            }
+        }
+        return allTaskTypeGroups;
+    }
+
+    /**
      * Puts a new task with the given values in the database
      * @param name
      *          name of the task

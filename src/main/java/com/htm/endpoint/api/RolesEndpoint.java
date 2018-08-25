@@ -116,6 +116,24 @@ public class RolesEndpoint {
     }
 
     /**
+     * Gets all task types belonging to a specific role/group
+     * @param role
+     *         name of role
+     * @return
+     *         JSON-Array containing all names of task types belonging to role
+     */
+    @GET
+    @Path("/{role}/taskType")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getRoleTaskType(@PathParam("role") String role) {
+        String result = rolesService.getRoleTaskTypes(role);
+        if (result == null) {
+            return Response.status(404).build();
+        }
+        return Response.status(200).entity(result).build();
+    }
+
+    /**
      * Takes a JSON-String and updates a role/group. the following keys are required to update a role/group:
      * rolename, genericHumanRoles
      * @param role

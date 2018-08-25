@@ -12,6 +12,8 @@ public interface IRolesService {
 
     String getRoleUsers(String role);
 
+    String getRoleTaskTypes(String role);
+
     boolean updateRole(String id, String[] genericHumanRoles);
 
     boolean deleteRole(String id);
