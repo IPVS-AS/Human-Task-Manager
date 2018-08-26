@@ -232,7 +232,6 @@ public class TasksEndpoint {
      */
     @POST
     @Path("/{task}/output")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateOutputParameter(@PathParam("task") String task, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONArray json = null;
@@ -265,7 +264,6 @@ public class TasksEndpoint {
      */
     @POST
     @Path("/{task}")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateTask(@PathParam("task") String task, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;
@@ -312,7 +310,6 @@ public class TasksEndpoint {
      */
     @POST
     @Path("/{task}/claim")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response claimTask(@PathParam("task") String task, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

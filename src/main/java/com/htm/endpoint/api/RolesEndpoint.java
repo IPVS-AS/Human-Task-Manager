@@ -145,7 +145,6 @@ public class RolesEndpoint {
      */
     @POST
     @Path("/{role}")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateRole(@PathParam("role") String role, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

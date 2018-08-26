@@ -109,7 +109,6 @@ public class UsersEndpoint {
      */
     @POST
     @Path("/{user}")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateUser(@PathParam("user") String user, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;

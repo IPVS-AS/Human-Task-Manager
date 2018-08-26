@@ -98,7 +98,6 @@ public class TaskTypesEndpoint {
      */
     @POST
     @Path("/{taskType}")
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response updateTaskType(@PathParam("taskType") String taskType, String jsonString) {
         JSONParser parser = new JSONParser();
         JSONObject json = null;
