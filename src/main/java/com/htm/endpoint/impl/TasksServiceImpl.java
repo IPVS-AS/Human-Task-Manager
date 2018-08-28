@@ -3,7 +3,6 @@ package com.htm.endpoint.impl;
 import com.htm.db.IDataAccessProvider;
 import com.htm.endpoint.ITasksService;
 import com.htm.exceptions.DatabaseException;
-import com.htm.exceptions.HumanTaskManagerException;
 import com.htm.taskinstance.IInputParameter;
 import com.htm.taskinstance.IOutputParameter;
 import com.htm.taskinstance.ITaskInstance;
@@ -12,7 +11,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.xml.crypto.Data;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -138,9 +137,9 @@ public class TasksServiceImpl implements ITasksService {
                 response.put("name", task.getName());
                 JSONArray taskTypes = new JSONArray();
                 taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
-                response.put("taskType", taskTypes);
+                response.put("taskTypes", taskTypes);
                 response.put("priority", task.getPriority());
-                response.put("state", task.getStatus());
+                response.put("status", task.getStatus());
                 if (workItem.get(0).getAssignee() != null) {
                     response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                 }
@@ -206,8 +205,8 @@ public class TasksServiceImpl implements ITasksService {
                     response.put("name", task.getName());
                     JSONArray taskTypes = new JSONArray();
                     taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
-                    response.put("taskType", taskTypes);
-                    response.put("taskType", "Noch einfügen");
+                    response.put("taskTypes", taskTypes);
+                    //response.put("taskType", "Noch einfügen");
                     response.put("priority", task.getPriority());
                     response.put("state", task.getStatus());
                     if (workItem.get(0).getAssignee() != null) {
@@ -277,10 +276,10 @@ public class TasksServiceImpl implements ITasksService {
                     response.put("name", task.getName());
                     JSONArray taskTypes = new JSONArray();
                     taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
-                    response.put("taskType", taskTypes);
-                    response.put("taskType", "Noch einfügen");
+                    response.put("taskTypes", taskTypes);
+                    //response.put("taskType", "Noch einfügen");
                     response.put("priority", task.getPriority());
-                    response.put("state", task.getStatus());
+                    response.put("status", task.getStatus());
                     if (workItem.get(0).getAssignee() != null) {
                         response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                     }
@@ -348,9 +347,9 @@ public class TasksServiceImpl implements ITasksService {
                     response.put("name", task.getName());
                     JSONArray taskTypes = new JSONArray();
                     taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
-                    response.put("taskType", taskTypes);
+                    response.put("taskTypes", taskTypes);
                     response.put("priority", task.getPriority());
-                    response.put("state", task.getStatus());
+                    response.put("status", task.getStatus());
                     if (workItem.get(0).getAssignee() != null) {
                         response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                     }

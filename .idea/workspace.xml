@@ -9,11 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e3d9e866-81ce-46de-8b85-bc401d76144c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -118,8 +115,8 @@
       <file leaf-file-name="DataAccessRepositoryToscaImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17272">
-              <caret line="1046" selection-start-line="1046" selection-end-line="1046" />
+            <state relative-caret-position="68">
+              <caret line="1590" selection-start-line="1590" selection-end-line="1590" />
             </state>
           </provider>
         </entry>
@@ -160,11 +157,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TasksEndpoint.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TasksEndpoint.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5100">
-              <caret line="311" column="26" selection-start-line="311" selection-start-column="26" selection-end-line="311" selection-end-column="26" />
+            <state relative-caret-position="-2890">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TasksServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,10 +187,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RolesServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RolesServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
+            <state relative-caret-position="2669">
               <caret line="170" selection-start-line="169" selection-end-line="170" />
             </state>
           </provider>
@@ -192,15 +201,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2754">
               <caret line="193" column="84" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IRolesService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -224,12 +224,15 @@
       <find>getgr</find>
       <find>creategroup</find>
       <find>updatetask</find>
-      <find>createT</find>
       <find>creategr</find>
       <find>createtask</find>
       <find>createinpu</find>
       <find>status</find>
       <find>gettasktypea</find>
+      <find>state</find>
+      <find>createT</find>
+      <find>gethumantas</find>
+      <find>getTaskTypeByTask</find>
     </findStrings>
     <replaceStrings>
       <replace>VARCHAR(100)</replace>
@@ -588,13 +591,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" />
@@ -602,6 +603,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" />
       </list>
     </option>
   </component>
@@ -622,8 +625,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-45" />
-    <option name="y" value="-18" />
+    <option name="x" value="2245" />
+    <option name="y" value="-31" />
     <option name="width" value="864" />
     <option name="height" value="972" />
   </component>
@@ -1291,6 +1294,10 @@
       <workItem from="1535094636852" duration="5511000" />
       <workItem from="1535218973733" duration="6123000" />
       <workItem from="1535282692537" duration="613000" />
+      <workItem from="1535355701924" duration="3840000" />
+      <workItem from="1535394775539" duration="1367000" />
+      <workItem from="1535440914341" duration="4196000" />
+      <workItem from="1535473537543" duration="1650000" />
     </task>
     <servers />
   </component>
@@ -1300,10 +1307,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296484000" />
+    <option name="totallyTimeSpent" value="307537000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
@@ -1316,15 +1323,15 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.094915256" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.43954802" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.43986255" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.43814433" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32302406" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.11638418" />
       <window_info anchor="bottom" id="Spring" order="14" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Persistence" order="6" side_tool="true" />
@@ -1353,7 +1360,7 @@
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3298969" />
       <window_info anchor="bottom" id="Spring" order="14" weight="0.3298969" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.18041237" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.23591924" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32943013" />
       <window_info id="UI Designer" order="4" />
@@ -1364,7 +1371,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.43986255" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.43889478" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
@@ -1397,78 +1404,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>520</line>
-          <properties />
-          <option name="timeStamp" value="579" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>430</line>
-          <properties />
-          <option name="timeStamp" value="591" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>431</line>
-          <properties />
-          <option name="timeStamp" value="592" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>432</line>
-          <properties />
-          <option name="timeStamp" value="593" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>434</line>
-          <properties />
-          <option name="timeStamp" value="594" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>435</line>
-          <properties />
-          <option name="timeStamp" value="595" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>433</line>
-          <properties />
-          <option name="timeStamp" value="596" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>436</line>
-          <properties />
-          <option name="timeStamp" value="597" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>437</line>
-          <properties />
-          <option name="timeStamp" value="598" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>438</line>
-          <properties />
-          <option name="timeStamp" value="599" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>429</line>
-          <properties />
-          <option name="timeStamp" value="600" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>428</line>
-          <properties />
-          <option name="timeStamp" value="601" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
           <line>1031</line>
           <properties />
@@ -1486,11 +1421,23 @@
           <properties />
           <option name="timeStamp" value="644" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="657" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
+          <line>139</line>
+          <properties />
+          <option name="timeStamp" value="658" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="655" />
+      <option name="time" value="673" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1640,16 +1587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
           <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="438" selection-start-line="438" selection-end-line="438" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1807,13 +1744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18683">
-          <caret line="1163" column="8" selection-start-line="1163" selection-start-column="8" selection-end-line="1163" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17136">
@@ -1821,31 +1751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17272">
-          <caret line="1046" selection-start-line="1046" selection-end-line="1046" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
           <caret line="124" selection-start-line="115" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5100">
-          <caret line="311" column="26" selection-start-line="311" selection-start-column="26" selection-end-line="311" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1858,8 +1767,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
+        <state relative-caret-position="2669">
           <caret line="170" selection-start-line="169" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18683">
+          <caret line="1163" column="8" selection-start-line="1163" selection-start-column="8" selection-end-line="1163" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="1590" selection-start-line="1590" selection-end-line="1590" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2890">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>

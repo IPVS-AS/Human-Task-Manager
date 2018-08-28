@@ -1597,8 +1597,9 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
         if (!taskTypeIds.isEmpty()) {
             Iterator it = taskTypeIds.iterator();
             while (it.hasNext()) {
+                int taskType = (int) it.next();
                 Query query1 = em.createQuery("SELECT t.taskTypeName FROM TaskType t WHERE t.id = :id");
-                query1.setParameter("id", (Integer) it.next());
+                query1.setParameter("id", taskType);
                 String taskTypeName = (String) query1.getSingleResult();
                 allTaskTypeTasks.add(taskTypeName);
             }
