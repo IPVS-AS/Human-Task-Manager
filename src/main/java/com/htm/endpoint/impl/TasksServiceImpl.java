@@ -30,8 +30,6 @@ public class TasksServiceImpl implements ITasksService {
      *          name of the task
      * @param taskTypeNames
      *          name of the task type of the task
-     * @param state
-     *          state of the task
      * @param inputParameter
      *          input parameters of the task
      * @param outputParameter
@@ -139,7 +137,7 @@ public class TasksServiceImpl implements ITasksService {
                 taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
                 response.put("taskTypes", taskTypes);
                 response.put("priority", task.getPriority());
-                response.put("status", task.getStatus());
+                response.put("status", task.getStatus().name().toLowerCase());
                 if (workItem.get(0).getAssignee() != null) {
                     response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                 }
@@ -208,7 +206,7 @@ public class TasksServiceImpl implements ITasksService {
                     response.put("taskTypes", taskTypes);
                     //response.put("taskType", "Noch einfügen");
                     response.put("priority", task.getPriority());
-                    response.put("state", task.getStatus());
+                    response.put("status", task.getStatus().name().toLowerCase());
                     if (workItem.get(0).getAssignee() != null) {
                         response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                     }
@@ -279,7 +277,7 @@ public class TasksServiceImpl implements ITasksService {
                     response.put("taskTypes", taskTypes);
                     //response.put("taskType", "Noch einfügen");
                     response.put("priority", task.getPriority());
-                    response.put("status", task.getStatus());
+                    response.put("status", task.getStatus().name().toLowerCase());
                     if (workItem.get(0).getAssignee() != null) {
                         response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                     }
@@ -349,7 +347,7 @@ public class TasksServiceImpl implements ITasksService {
                     taskTypes.addAll(dataAccessTosca.getTaskTypeByTask(task.getId()));
                     response.put("taskTypes", taskTypes);
                     response.put("priority", task.getPriority());
-                    response.put("status", task.getStatus());
+                    response.put("status", task.getStatus().name().toLowerCase());
                     if (workItem.get(0).getAssignee() != null) {
                         response.put("claimedBy", workItem.get(0).getAssignee().getUserId());
                     }

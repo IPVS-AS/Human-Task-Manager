@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3d9e866-81ce-46de-8b85-bc401d76144c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -115,7 +114,7 @@
       <file leaf-file-name="DataAccessRepositoryToscaImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="26520">
               <caret line="1590" selection-start-line="1590" selection-end-line="1590" />
             </state>
           </provider>
@@ -142,8 +141,17 @@
       <file leaf-file-name="UsersEndpoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="124" selection-start-line="115" selection-end-line="124" />
+            <state relative-caret-position="-506">
+              <caret line="83" selection-start-line="82" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-beans.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -157,20 +165,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TasksEndpoint.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TasksEndpoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2890">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="2278">
+              <caret line="329" column="7" selection-start-line="329" selection-start-column="7" selection-end-line="329" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TasksServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TasksServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
+            <state relative-caret-position="-2815">
+              <caret line="349" column="80" selection-start-line="349" selection-start-column="80" selection-end-line="349" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,15 +200,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2669">
               <caret line="170" selection-start-line="169" selection-end-line="170" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDataAccessProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2754">
-              <caret line="193" column="84" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -590,7 +589,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" />
@@ -603,8 +601,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -640,7 +639,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1018,6 +1016,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1298,6 +1297,8 @@
       <workItem from="1535394775539" duration="1367000" />
       <workItem from="1535440914341" duration="4196000" />
       <workItem from="1535473537543" duration="1650000" />
+      <workItem from="1535527649590" duration="1011000" />
+      <workItem from="1535565200354" duration="2115000" />
     </task>
     <servers />
   </component>
@@ -1307,10 +1308,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307537000" />
+    <option name="totallyTimeSpent" value="310663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
@@ -1325,17 +1327,17 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.43954802" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.43814433" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.43728814" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.11638418" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.23841807" />
       <window_info anchor="bottom" id="Spring" order="14" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13270882" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2109375" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32943013" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.17954724" />
@@ -1352,47 +1354,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="9" weight="0.4742268" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3298969" />
-      <window_info anchor="bottom" id="Spring" order="14" weight="0.3298969" />
-      <window_info anchor="bottom" id="Database Console" order="17" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.23591924" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32943013" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.43889478" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="15" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3298969" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.17954724" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.13270882" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="JPA Console" order="0" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3298969" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32943013" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.094915256" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1420,18 +1381,6 @@
           <line>1032</line>
           <properties />
           <option name="timeStamp" value="644" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>138</line>
-          <properties />
-          <option name="timeStamp" value="657" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="658" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1702,13 +1651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -1751,13 +1693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="124" selection-start-line="115" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1772,13 +1707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18683">
@@ -1786,27 +1714,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="26520">
+          <caret line="1590" selection-start-line="1590" selection-end-line="1590" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="1590" selection-start-line="1590" selection-end-line="1590" />
+        <state relative-caret-position="-506">
+          <caret line="83" selection-start-line="82" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2890">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="2278">
+          <caret line="329" column="7" selection-start-line="329" selection-start-column="7" selection-end-line="329" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2815">
+          <caret line="349" column="80" selection-start-line="349" selection-start-column="80" selection-end-line="349" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
