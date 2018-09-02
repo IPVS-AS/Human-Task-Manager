@@ -70,7 +70,8 @@ public enum ETaskInstanceState {
             case READY:
                 if (this.equals(ETaskInstanceState.CREATED) ||
                         this.equals(ETaskInstanceState.RESERVED) ||
-                        this.equals(ETaskInstanceState.SUSPENDED_READY)) {
+                        this.equals(ETaskInstanceState.SUSPENDED_READY) ||
+                        this.equals(ETaskInstanceState.IN_PROGRESS)) {
                     return true;
                 } else {
                     return false;

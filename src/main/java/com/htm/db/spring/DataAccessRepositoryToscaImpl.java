@@ -1490,7 +1490,7 @@ public class DataAccessRepositoryToscaImpl implements DataAccessRepositoryCustom
                 }
                 Set<String> labels = outputParameter.keySet();
                 for (String label : labels) {
-                    createInputParameter(label,(String) outputParameter.get(label), id);
+                    createOutputParameter(label,(String) outputParameter.get(label), id);
                 }
             }
             return true;
