@@ -10,7 +10,32 @@
     <list default="true" id="e3d9e866-81ce-46de-8b85-bc401d76144c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskTypeWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskTypeWrapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -112,74 +137,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="spring-beans.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputParameter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#1998#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputParameter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#1994#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDataAccessProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2754">
+              <caret line="193" column="84" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataAccessRepositoryToscaImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="1490" column="62" lean-forward="true" selection-start-line="1490" selection-start-column="62" selection-end-line="1490" selection-end-column="62" />
+            <state relative-caret-position="8031">
+              <caret line="1616" column="47" lean-forward="true" selection-start-line="1616" selection-start-column="47" selection-end-line="1616" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#60945#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ETaskInstanceState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java">
+      <file leaf-file-name="drop.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/drop.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="RolesServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+            <state relative-caret-position="429">
+              <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#8628#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AopUtils.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.0.7.RELEASE/f6f058fe78e0b2c8155b1008c55312152367cf13/spring-aop-5.0.7.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+      <file leaf-file-name="ITasksService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5015">
-              <caret line="342" selection-start-line="342" selection-end-line="342" />
+            <state relative-caret-position="119">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataAccessRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
+      <file leaf-file-name="create2.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/create2.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1163" column="8" selection-start-line="1163" selection-start-column="8" selection-end-line="1163" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="83" selection-start-line="82" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-beans.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskTypesEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TasksEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="288" column="44" lean-forward="true" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
+            <state relative-caret-position="-3897">
+              <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -187,20 +233,11 @@
       <file leaf-file-name="TasksServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="517" selection-start-line="517" selection-end-line="517" />
+            <state relative-caret-position="-7422">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#24389#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RolesServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2669">
-              <caret line="170" selection-start-line="169" selection-end-line="170" />
             </state>
           </provider>
         </entry>
@@ -567,46 +604,46 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerBasicImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/create2.sql" />
         <option value="$PROJECT_DIR$/src/test/java/com/htm/test/UserManagerDummy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskmodel/ITaskType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/ITaskType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypesTasks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Group.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Humantaskinstance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskTypeWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/dm/EHumanRoles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskTypeWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java" />
       </list>
     </option>
   </component>
@@ -627,7 +664,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="30" />
+    <option name="x" value="1897" />
     <option name="y" value="-11" />
     <option name="width" value="1944" />
     <option name="height" value="1104" />
@@ -640,13 +677,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="task-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="task-manager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="task-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task-manager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="task-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task-manager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="task-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -1018,8 +1065,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1308,6 +1356,14 @@
       <workItem from="1535734325100" duration="854000" />
       <workItem from="1535808475796" duration="1209000" />
       <workItem from="1535887297302" duration="4969000" />
+      <workItem from="1535990057976" duration="953000" />
+      <workItem from="1536007133178" duration="1310000" />
+      <workItem from="1536076081036" duration="1497000" />
+      <workItem from="1536234827789" duration="454000" />
+      <workItem from="1536250552099" duration="464000" />
+      <workItem from="1538681596516" duration="1577000" />
+      <workItem from="1538725991356" duration="10359000" />
+      <workItem from="1538808671129" duration="17296000" />
     </task>
     <servers />
   </component>
@@ -1317,10 +1373,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324456000" />
+    <option name="totallyTimeSpent" value="358366000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
@@ -1335,17 +1391,16 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.43889317" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.4364261" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.53780067" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.5343643" />
       <window_info anchor="bottom" id="Spring" order="14" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16861826" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16875" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32943013" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.17954724" />
@@ -1358,6 +1413,7 @@
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.3298969" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3298969" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.4364261" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.4742268" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -1371,78 +1427,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1031</line>
-          <properties />
-          <option name="timeStamp" value="641" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1033</line>
-          <properties />
-          <option name="timeStamp" value="643" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1032</line>
-          <properties />
-          <option name="timeStamp" value="644" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1526</line>
-          <properties />
-          <option name="timeStamp" value="673" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1527</line>
-          <properties />
-          <option name="timeStamp" value="674" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1528</line>
-          <properties />
-          <option name="timeStamp" value="675" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1520</line>
-          <properties />
-          <option name="timeStamp" value="677" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1521</line>
-          <properties />
-          <option name="timeStamp" value="678" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1517</line>
-          <properties />
-          <option name="timeStamp" value="679" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1524</line>
-          <properties />
-          <option name="timeStamp" value="680" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java</url>
-          <line>1525</line>
-          <properties />
-          <option name="timeStamp" value="681" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="682" />
+      <option name="time" value="685" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1455,150 +1443,10 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Attachment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/AttachmentWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/EActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/dm/EHumanRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/TaskInstanceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2397">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskInstanceWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/userdirectory/UserDirectoryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/userdirectory/jpa/UserDirectoryFactoryJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="61" column="50" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/create2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shtm/operationAndStates/EStates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Humantaskinstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Workitem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IWorkItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/WorkItemWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/AssignedUserWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1609,150 +1457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" selection-start-line="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="58" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="193" column="84" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/DatabaseAccessProviderJPA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17136">
           <caret line="1069" column="8" selection-start-line="1069" selection-start-column="8" selection-end-line="1069" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="170" selection-start-line="169" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1763,55 +1471,377 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TaskTypesEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="124" selection-start-line="2" selection-start-column="124" selection-end-line="2" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/UsersEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="83" selection-start-line="82" selection-end-line="83" />
+        <state relative-caret-position="34">
+          <caret line="2" column="124" selection-start-line="2" selection-start-column="124" selection-end-line="2" selection-end-column="124" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/UsersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="288" column="44" lean-forward="true" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
+        <state relative-caret-position="34">
+          <caret line="2" column="124" selection-start-line="2" selection-start-column="124" selection-end-line="2" selection-end-column="124" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITaskTypesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="517" selection-start-line="517" selection-end-line="517" />
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/IUsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroupsPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasksPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/security/UserManagerToscaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/OutputParameterWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#2716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IInputParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/TasksEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1163" column="8" selection-start-line="1163" selection-start-column="8" selection-end-line="1163" selection-end-column="20" />
+        <state relative-caret-position="238">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#14825#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ETaskInstanceState.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/IRolesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        <state relative-caret-position="200">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/api/RolesEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="1490" column="62" lean-forward="true" selection-start-line="1490" selection-start-column="62" selection-end-line="1490" selection-end-column="62" />
+        <state relative-caret-position="106">
+          <caret line="162" selection-start-line="162" selection-end-line="181" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="16" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/Humantaskmodel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/FaultImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/WorkItemFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ICorrelationProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/WorkItemWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/InputParameterWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#2693#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskInstanceFactoryJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TaskTypesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#6013#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskParentContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeGroups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/ITaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#1320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/jpa/TaskTypeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#2936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskTypeTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#1698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/TaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IFault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IWorkItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/taskinstance/IOutputParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/OutputParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1998#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/entities/jpa/InputParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/IDataAccessProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="193" column="84" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring-beans.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="316">
+          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/RolesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#8628#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/ITasksService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/endpoint/impl/TasksServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7422">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#24389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/htm/db/spring/DataAccessRepositoryToscaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8031">
+          <caret line="1616" column="47" lean-forward="true" selection-start-line="1616" selection-start-column="47" selection-end-line="1616" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#60945#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/drop.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/create2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3897">
+          <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
         </state>
       </provider>
     </entry>

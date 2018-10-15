@@ -1,6 +1,6 @@
 /*
- * Copyright 2012 Bangkok Project Team, GRIDSOLUT GmbH + Co.KG, and
- * University of Stuttgart (Institute of Architecture of Application Systems)
+ * Copyright 2018 OpenTOSCA and
+ * University of Stuttgart (Institute of Architecture of Application Systems, Institute for Parallel and Distributed Systems)
  * All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
